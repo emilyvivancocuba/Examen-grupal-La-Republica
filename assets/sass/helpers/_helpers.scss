@@ -1,0 +1,30 @@
+.upper{
+	text-transform: uppercase;
+}
+.t-trans-none{
+	text-transform: none;
+}
+.w-100{
+	width: 100%;
+}
+.font-monse{
+	font-family: 'Montserrat', Arial, sans-serif;
+}
+.font-droid{
+	font-family: 'Droid Serif', serif;
+}
+.font-robot{
+	font-family: 'Roboto Slab', Arial, sans-serif;
+}
+.a-table{
+	@include border-radius(100%);
+	color: $white;
+	display: table;
+	&:hover{
+		@include border-radius(15px);
+	}
+}
+.i-centered{
+	display: table-cell;
+	vertical-align: middle;
+}

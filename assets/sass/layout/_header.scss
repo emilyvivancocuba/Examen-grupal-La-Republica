@@ -1,0 +1,272 @@
+/*INICIO ESTILOS HEADER*/
+
+header{
+	@extend .font-monse;
+}
+.navbar-brand{
+	font-family: 'Kaushan Script', cursiva;
+	color: $mostaza;
+	font-size: 32px;
+	&:hover, &:focus{
+		color: $yellow;
+	}
+}
+.nav-agency-theme{
+	background-color: #222;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.navbar-right{
+	a{
+		color: $white;
+		@extend .upper;
+	}
+}
+.nav{
+	li{
+		a{
+			&:hover, &:focus{
+				background-color: #433C3B;
+				color: $yellow;
+			}
+		}
+	}
+}
+.navbar-toggle{
+	border: 1px solid $white;
+	.icon-bar{
+		background-color: $white;
+	}
+}
+
+/*INICIO ESTILOS SECCION PRINCIPAL*/
+.hero{
+	@include fullscreen(url(../../img/header-bg.jpg));
+}
+.hero-text{
+	display: table-cell;
+	vertical-align: middle;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	color: $white;
+	h3{
+		@extend .font-droid;
+		@extend .t-trans-none;
+		font-weight: normal;
+		font-style: italic;
+    	font-size: 40px;
+    	line-height: 1.0;
+    	margin-bottom: 25px;
+	}
+	h1{
+		@extend .upper;
+		@extend .font-monse;
+		font-weight: 700;
+		font-size: 75px;
+		line-height: 1.5;
+		margin-bottom: 50px;
+	}
+}
+
+
+/*INICIO ESTILOS SECCION SERVICIOS*/
+.services{
+	h4{
+		text-transform: none;
+	}
+	a{
+		@extend .a-table;
+		background-color: $yellow;
+		padding: 10px;
+		width: 100px;
+		height: 100px;
+		margin: auto;
+		margin-bottom: 20px;
+		&:hover{
+			color: $white;
+		}
+		i{
+			@extend .i-centered;
+			font-size: 55px;
+		}
+	}
+}
+
+
+/*INICIO ESTILOS PORTAFOLIO*/
+.portfolio{
+	.box{
+		margin-bottom: 30px;
+		border: 2px solid $bg-plomo;
+		-webkit-transition: .4s;
+    			transition: .4s;
+		&:hover{
+			border: 2px solid $mostaza;
+		}
+		a{
+			background-color: $white;
+			display: block;
+			padding-bottom: 15px;
+			&:hover{
+				background-color: #FFFCE9;
+			}
+			p{
+				font-style: italic;
+			}
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}	
+}
+
+
+/*INICIO ESTILOS BOX*/
+.box{
+	h4{
+		@extend .t-trans-none;
+		color: #000;
+		padding-top: 15px;
+	}
+	p{
+		@extend .font-droid;
+		font-size: 16px;
+	}
+}
+
+
+/*INICIO ESTILOS LINEA DEL TIEMPO*/
+.timeline {
+    position: relative;
+    &:before {
+	    position: absolute;
+	    content: "";
+	    top: 0;
+	    bottom: 0;
+	    width: 3px;
+	    background-color: $bg-plomo;
+	    margin-left: -2px;
+	}
+	li{
+		&.yellow{
+			display: table;
+			text-align: center;
+			border: 6px solid $bg-plomo;
+			@include border-radius(100%);
+			margin: auto;
+			h4{
+				display: table-cell;
+				vertical-align: middle;
+				@include border-radius(100%);
+				background-color: $mostaza;
+				color: $white;
+				width: 140px;
+				height: 140px;
+			}
+		}
+		position: relative;
+		.timeline-img{
+			left: 0;
+			margin-left: 0;
+			width: 80px;
+			height: 80px;
+			position: absolute;
+			z-index: 10;
+		}
+		.timeline-text{
+			width: 100%;
+			float: right;
+			padding: 0 20px 0 100px;
+			position: relative;
+			text-align: left;
+			.timeline-title{
+				h4{
+					margin-top: 0;
+				}
+			}
+			.timeline-parrafo{
+				p{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+
+/*INICIO ESTILOS TEAM*/
+.our-amazing-team{
+	.parrafo{
+		padding-top: 40px;
+		line-height: 1.75;
+		font-size: 16px;
+		width: 65%;
+		margin: auto;
+	}
+}
+
+
+/* ESTILOS SPONSORS */
+.links-sponsors{
+	li{
+		margin:50px 40px;
+	}
+}
+
+
+/* CONTACT */
+.contact-us{
+	@include fullscreen(url(../../img/map-image.png));
+	background-color: #000;
+	h2{
+		color: $white;
+	}
+	input, textarea{
+		@include border-radius(5px);
+		@extend .upper;
+		@extend .font-monse;
+		width: 100%;
+		padding: 24px 20px;
+		margin-bottom: 25px;
+		border: none;
+		font-size: 14px;
+		font-weight: 700;
+	}
+	textarea{
+		height: 252px;
+	}
+}
+::-webkit-input-placeholder{
+	color: #BBBBC9;
+}
+
+
+/* FOOTER */
+
+footer{
+	@extend .font-monse;
+	padding-top: 40px;
+	padding-bottom: 30px;
+	span{
+		margin-top: 15px;
+		a{
+			color: #000;
+			&:hover{
+				color: $mostaza;
+			}
+		}
+	}
+	ul{
+		li{
+			margin-left: 5px;
+			margin-right: 5px;
+			a{
+				color: $mostaza;
+				&:hover{
+					color: $yellow;
+				}
+			}
+		}
+	}
+}

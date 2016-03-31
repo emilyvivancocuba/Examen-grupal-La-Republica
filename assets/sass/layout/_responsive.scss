@@ -1,0 +1,118 @@
+@media (max-width: 991px){
+	.navbar-nav{
+		li{
+			a{
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+		}
+	}
+	.our-amazing-team{
+		.parrafo{
+			width: 90%;
+		}
+	}
+	.timeline{
+		li{
+			&.yellow{
+				h4{
+					width: 80px;
+					height: 80px;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	.box{
+		margin-bottom: 50px;
+	}
+}
+@media (min-width: 768px){
+	.timeline{
+		li{
+			margin-bottom: 100px;
+			.timeline-img{
+				width: 100px;
+				height: 100px;
+				left: 50%;
+				margin-left: -50px;
+			}
+			.timeline-text {
+				width: 41%;
+				float: left;
+				padding: 0px 20px 20px 30px;
+				text-align: right;
+			}
+			&.timeline-text-right{
+				.timeline-text{
+					float: right;
+					text-align: left;
+					padding: 0px 30px 20px 20px;
+				}
+			}
+		}
+		&:before{
+			left: 50%;
+		}
+	}
+}
+@media (min-width: 1200px){
+	.timeline{
+		li{
+			.timeline-img{
+				width: 170px;
+				height: 170px;
+				margin-left: -85px;
+			}
+			.timeline-text {
+				padding: 0px 20px 20px 100px;
+			}
+			&.timeline-text-right{
+				.timeline-text{
+					padding: 0px 100px 20px 20px;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 992px){
+	.timeline{
+		li{
+			.timeline-img{
+				width: 150px;
+				height: 150px;
+				margin-left: -75px;
+			}
+			.timeline-text {
+				padding: 0px 20px 20px;
+			}
+			&.timeline-text-right{
+				.timeline-text{
+					padding: 0px 20px 20px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 768px){
+	.timeline{
+		&:before{
+			margin-left: 38px;
+		}
+		li{
+			.timeline-text{
+				margin-bottom: 80px;
+			}
+			&.yellow{
+				float: left;
+				left: -6px;
+			}
+		}
+	}
+	footer{
+		.redes{
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+	}
+}

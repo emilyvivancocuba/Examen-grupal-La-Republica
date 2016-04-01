@@ -5826,7 +5826,7 @@ body {
   font-family: 'Oswald', sans-serif; }
 
 a {
-  text-decoration: none !important;
+  text-decoration: none;
   -webkit-transition: .3s;
   transition: .3s; }
   a:hover, a:focus {

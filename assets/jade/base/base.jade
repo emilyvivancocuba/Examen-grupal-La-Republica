@@ -8,17 +8,227 @@ html(lang="en")
 		link(href='http://fonts.googleapis.com/css?family=PT+Sans:400,700', rel='stylesheet', type='text/css')
 		link(href='http://fonts.googleapis.com/css?family=Oswald:400,700', rel='stylesheet', type='text/css')
 		link(rel='stylesheet', type='text/css', href='assets/css/dist/font-awesome.min.css')
-		link(rel='stylesheet', type='text/css', href='assets/css/dist/bootstrap.min.css')
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 		link(rel='stylesheet', type='text/css', href='assets/css/dist/slick.css')
 		link(rel='stylesheet', type='text/css', href='assets/css/dist/slick-theme.css')
 		link(rel='stylesheet', type='text/css', href='assets/css/main.css')
+	body
+		header
+			.cabecera.bck-gris
+				.container-fluid
+					.row.text-center
+						.col-md-8.col-md-offset-2.pdt-15
+							img.w-100(src="assets/image/banner_top.jpg")
+					.row
+						.col-md-4.col-md-offset-2
+							+enlace('e-nwspaper','http://www.libero.pe/','libero.pe')
+							+enlace('e-nwspaper','http://www.elpopular.pe/','elpopular.pe')
+							+enlace('e-nwspaper','http://www.elpopular.pe/','fundacion gustavo mohme llona') 
+						.col-md-4.text-right
+							+enlace('e-nwspaper btn-red','http://www.libero.pe/','suscríbete al boletín') 
+							+enlace('social fb fa fa-facebook','http://www.facebook.com')
+							+enlace('social tw fa fa-twitter','http://www.twitter.com')
+							+enlace('social g-plus fa fa-google-plus','http://www.google.com')
+							+enlace('social htm fa fa-envelope','http://www.hotmail.com')
+							+enlace('social rss fa fa-rss','http://www.rss.com')
+							button.search.e-nwspaper buscar
+								span.fa.fa-search.pdl-15
+			.container-fluid
+				.row
+					.col-md-2.col-md-offset-2.text-center.col-sm-12
+						img.logo(src="assets/image/logo-la-republica.jpg", alt="Logo la republica")
+					.col-md-3.clearfix.col-xs-12.text-center
+						.t-day.cuadro-titular
+							span habla lideresa del nacionalismo
+					.col-md-3.clearfix.col-xs-12.text-center
+						.cuadro-titular.t-editorial
+							img.pull-left(src="assets/image/img_editorial_text.jpg", alt="")
+							span La corrupción, los orígenes<br>
+								small por: Gustavo Mohme Llona
+							img.pull-right(src="assets/image/img_author.jpg", alt="")
+				.row
+					.col-md-8.col-md-offset-2
+						nav
+							//- Fixed navbar
+							.navbar.navbar-default(role='navigation')
+								.navbar-header.page-scroll
+									button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+										span.sr-only Toggle navigation
+										span.icon-bar
+										span.icon-bar
+										span.icon-bar
+									a.navbar-brand.page-scroll(href='#page-top').hidden-sm.hidden-md.hidden-lg 	
+										h1 
+											img(src="assets/image/logo-la-republica.jpg", alt="")
+								.navbar-collapse.collapse(aria-exanded="true")
+									ul.nav.navbar-nav
+										li
+											a.page-scroll(href='#service') política
+												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+										li
+											a.page-scroll(href='#portfolio') economía
+												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+										li
+											a.page-scroll(href='#about') sociedad
+												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+										li
+											a.page-scroll(href='#team') elecc. regionales
+												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+										li
+											a.page-scroll(href='#contact') deportes
+												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+										li
+											a.page-scroll(href='#contact') chhampions l.
+												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+										li
+											a.page-scroll(href='#contact') espectáculos
+												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+										li
+											a.page-scroll(href='#contact') ed. impresa
+												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+										li
+											a.page-scroll(href='#contact') regionales
+												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+										li
+											a.page-scroll(href='#contact') más secciones
+
+						//-nav-collapse
+		section
+			.container-fluid
+				.row
+					.col-md-2.hidden-xs.hidden-sm
+						img.publicity(src="assets/image/publicidad1.png", alt="")
+					.col-md-8
+						block contenido
+					.col-md-2.hidden-xs.hidden-sm
+						img.publicity(src="assets/image/publicidad2.png", alt="")
+		footer
+			.cabecera.bck-gris
+				.container-fluid
+					.row.mgtb-30
+						.col-md-2.col-md-offset-2.border-right.col-xs-12.pdt-15
+							.cont-footer
+								a.page-scroll(href='#page-top') 
+									img(src="assets/image/logo-grupo-la-republica.png", alt="")
+								h5 Grupo La República Digital
+								p Jr. Camaná 320 Ceercado de Lima <br> Teléfono:711-6000 <br> (Central Telefónica)
+								small Todos los derechos reservados - 2015
+						.col-md-6
+							.row
+								.col-md-3.pdl-30.col-xs-6.pdt-15
+									+enlace('e-footer','#','Rogeer Federer')
+									+enlace('e-footer','#','SBS')
+									+enlace('e-footer','#','Scarlett Johansson')
+									+enlace('e-footer','#','Scotiabank')
+									+enlace('e-footer','#','Selena Gómez')
+									+enlace('e-footer','#','Spiderman')
+									+enlace('e-footer','#','Sporting Cristal')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Rogeer Federer')
+									+enlace('e-footer','#','SBS')
+									+enlace('e-footer','#','Scarlett Johansson')
+									+enlace('e-footer','#','Scotiabank')
+									+enlace('e-footer','#','Selena Gómez')
+									+enlace('e-footer','#','Spiderman')
+									+enlace('e-footer','#','Sporting Cristal')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Rogeer Federer')
+									+enlace('e-footer','#','SBS')
+									+enlace('e-footer','#','Scarlett Johansson')
+									+enlace('e-footer','#','Scotiabank')
+									
+								.col-md-3.pdl-30.col-xs-6.pdt-15
+									+enlace('e-footer','#','Rogeer Federer')
+									+enlace('e-footer','#','SBS')
+									+enlace('e-footer','#','Scarlett Johansson')
+									+enlace('e-footer','#','Scotiabank')
+									+enlace('e-footer','#','Selena Gómez')
+									+enlace('e-footer','#','Spiderman')
+									+enlace('e-footer','#','Sporting Cristal')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Rogeer Federer')
+									+enlace('e-footer','#','SBS')
+									+enlace('e-footer','#','Scarlett Johansson')
+									+enlace('e-footer','#','Scotiabank')
+									+enlace('e-footer','#','Selena Gómez')
+									+enlace('e-footer','#','Spiderman')
+									+enlace('e-footer','#','Sporting Cristal')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Rogeer Federer')
+									+enlace('e-footer','#','SBS')
+									+enlace('e-footer','#','Scarlett Johansson')
+									+enlace('e-footer','#','Scotiabank')
+								.col-md-3.pdl-30.col-xs-6.pdt-15
+									+enlace('e-footer','#','Rogeer Federer')
+									+enlace('e-footer','#','SBS')
+									+enlace('e-footer','#','Scarlett Johansson')
+									+enlace('e-footer','#','Scotiabank')
+									+enlace('e-footer','#','Selena Gómez')
+									+enlace('e-footer','#','Spiderman')
+									+enlace('e-footer','#','Sporting Cristal')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Rogeer Federer')
+									+enlace('e-footer','#','SBS')
+									+enlace('e-footer','#','Scarlett Johansson')
+									+enlace('e-footer','#','Scotiabank')
+									+enlace('e-footer','#','Selena Gómez')
+									+enlace('e-footer','#','Spiderman')
+									+enlace('e-footer','#','Sporting Cristal')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Rogeer Federer')
+									+enlace('e-footer','#','SBS')
+									+enlace('e-footer','#','Scarlett Johansson')
+									+enlace('e-footer','#','Scotiabank')
+								.col-md-3.pdl-30.col-xs-6.pdt-15
+									+enlace('e-footer','#','Rogeer Federer')
+									+enlace('e-footer','#','SBS')
+									+enlace('e-footer','#','Scarlett Johansson')
+									+enlace('e-footer','#','Scotiabank')
+									+enlace('e-footer','#','Selena Gómez')
+									+enlace('e-footer','#','Spiderman')
+									+enlace('e-footer','#','Sporting Cristal')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Rogeer Federer')
+									+enlace('e-footer','#','SBS')
+									+enlace('e-footer','#','Scarlett Johansson')
+									+enlace('e-footer','#','Scotiabank')
+									+enlace('e-footer','#','Selena Gómez')
+									+enlace('e-footer','#','Spiderman')
+									+enlace('e-footer','#','Sporting Cristal')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Sunat')
+									+enlace('e-footer','#','Rogeer Federer')
+									+enlace('e-footer','#','SBS')
+									+enlace('e-footer','#','Scarlett Johansson')
+									+enlace('e-footer','#','Scotiabank')
+			.container-fluid.bck-gris
+				.row.final.mgtb-10
+					.col-md-8.col-md-offset-2
+						span Diarios del PAL:
+						+enlace('f-footer','#', 'Clarin')
+						+enlace('f-footer','#', 'La Tercera')
+						+enlace('f-footer','#', 'El Universal Colombia')
+						+enlace('f-footer','#', 'El Universal Venezuela')
+						+enlace('f-footer','#', 'Vanguardia')
+						+enlace('f-footer','#', 'La Prensa')
+						+enlace('f-footer','#', 'El Salvador')
+						+enlace('f-footer','#', 'La Verdad')
+						+enlace('f-footer','#', 'Diario Libre')
+						+enlace('f-footer','#', 'El diario de hoy')
+						+enlace('f-footer','#', 'El Colombiano')
+		script(src='assets/js/jquery.js')
 		script(src='http://code.jquery.com/jquery-1.11.2.min.js')
 		script(src='http://code.jquery.com/jquery-migrate-1.2.1.min.js')
-		script(type='text/javascript', src='js/bootstrap.min.js')
-		script(type='text/javascript', src='js/slick.min.js')
-		script(type='text/javascript', src='js/bootstrap-hover-dropdown.min.js')
-		script(type='text/javascript', src='js/modernizr.custom.68172.js')
-		script(type='text/javascript', src='js/respond.js')
-	body
-		block contenido
-	
+		script(type='text/javascript', src='assets/js/bootstrap.min.js')
+		script(type='text/javascript', src='assets/js/slick.min.js')
+		script(type='text/javascript', src='assets/js/bootstrap-hover-dropdown.min.js')
+		script(type='text/javascript', src='assets/js/modernizr.custom.68172.js')
+		script(type='text/javascript', src='assets/js/respond.js')
+		script(type='text/javascript', src='assets/js/main.js')

@@ -1,4 +1,7 @@
-
-mixin navegador(texto)
+mixin navegador(url,texto)
 	li
-		a(href="") #{texto}
+		a(href=url) #{texto}
+
+mixin enlace(clase,url,texto)
+	a(href=url,class=clase) #{texto}
+

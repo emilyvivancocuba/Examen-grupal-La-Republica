@@ -3,3 +3,8 @@
 	-moz-border-radius: $radius;
 	border-radius: $radius;
 }
+@mixin transition($time){
+	-webkit-transition: $time;
+	-moz-transition: $time;
+	-o-transition: $time;
+}

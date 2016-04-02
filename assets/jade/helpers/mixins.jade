@@ -13,12 +13,12 @@ mixin blog-box(title, subtitle1, subtitle2, imgURL)
 		.box
 			p
 				small Lunes, 14 de julio de 2015
-			h4= title
+			h3= title
 			+gray-box(subtitle1, subtitle2, imgURL)
 				if block
 					block
 mixin blog-gol-de-la-muerte
-	+blog-box('El gol de la muerte', 'Blog', 'Libros', 'assets/image/blog_avatar_01.jpg')
+	+blog-box('El gol de la muerte', 'Blog', 'LIBROS', 'assets/image/blog_avatar_01.jpg')
 	if block
 		block
 mixin columnista-1-gol-de-la-muerte
@@ -80,7 +80,7 @@ mixin gray-box-col(subtitle1, subtitle2, imgURL)
 		if block
 			block
 mixin row-1-todos-los-columnistas
-	.row
+	.row.row-columnistas
 		+gray-box-col('Francisco Durand', 'Tiro al blanco', 'assets/image/blog_avatar_02.jpg')
 		+gray-box-col('Humberto Campodónico', 'Cristal de Mira', 'assets/image/blog_avatar_03.jpg')
 		+gray-box-col('Javier Ágreda', 'Jaque Perpetuo', 'assets/image/blog_avatar_01.jpg')
@@ -88,7 +88,7 @@ mixin row-1-todos-los-columnistas
 		if block
 			block
 mixin row-2-todos-los-columnistas
-	.row
+	.row.row-columnistas
 		+gray-box-col('Francisco Durand', 'Delito de Opinión', 'assets/image/blog_avatar_03.jpg')
 		+gray-box-col('Humberto Campodónico', 'Actualidad Económica - Oscar Dancourt', 'assets/image/blog_avatar_01.jpg')
 		+gray-box-col('Javier Ágreda', 'Mirada externa', 'assets/image/blog_avatar_02.jpg')

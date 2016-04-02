@@ -1,0 +1,49 @@
+.columnistas{
+	color: $black-light;
+	.row{
+		margin-bottom: 20px;
+	}
+	.row-columnistas{
+		margin-bottom: 4px;
+		.col-xs-12,.col-sm-6,.col-md-3,.col-lg-3{
+			padding-left: 2px;
+    		padding-right: 2px;
+		}
+		.gray-box{
+			@include transition(.3s);
+			&:hover{
+				background-color: #fff;
+				.img-thumbnail{
+					background: $box-gray-bg;
+				}
+			}
+			.media-heading {
+			    text-transform: capitalize;
+			    font-size: 13px;
+			}
+			h5{
+    			margin-top: 5px;
+    		}
+		}
+	}
+}
+.row-columnistas{
+	&:nth-child(even){
+		.col-xs-12,.col-sm-6,.col-md-3,.col-lg-3{
+			&:nth-child(2){
+				.gray-box{
+					padding-bottom: 4px;
+					padding-top: 8px;
+					img{
+						margin-top: 7px;
+					}
+				}
+			}
+		}
+	}
+}
+.boton-guinda{
+	&.btn-columnistas{
+		width: 190px;
+	}
+}

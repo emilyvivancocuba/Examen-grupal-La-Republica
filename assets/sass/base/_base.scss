@@ -56,6 +56,7 @@ img.arrow{
 	border: 1px solid $box-border;
 	background-color: $box-gray-bg;
 	padding: 15px 15px 17px;
+	height: 95px;
 	cursor: default;
 	.media-left{
 		padding-right: 0px;
@@ -74,7 +75,7 @@ img.arrow{
 		font-family: 'PT Sans', sans-serif;
 		color: $blog-subtitle2;
 		font-weight: 700;
-		font-size: 16px;
+		font-size: 15px;
 	}
 	.img-thumbnail{
 		@include border-radius(0px);
@@ -88,8 +89,28 @@ img.arrow{
 	background-color: $guinda;
 	font-weight: 400;
 	text-transform: uppercase;
-	font-family: 'PT Sans';
+	font-family: 'PT Sans', sans-serif;
 	font-weight: 600;
 	padding-top: 4px;
 	padding-bottom: 4px;
+}
+
+
+::selection {
+    text-shadow: none;
+    background: $guinda2;
+}
+::-webkit-scrollbar{
+  width: 10px;
+	&-track-piece{
+  		background-color: $box-gray-bg;
+	}
+	&-button{
+  		width: 0px;
+  		height: 0px;
+	}
+	&-thumb{
+  		background-color: $hero-title-blue;
+  		border-radius: 60px;
+	}
 }

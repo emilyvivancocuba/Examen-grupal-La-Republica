@@ -36,7 +36,7 @@ html(lang="en")
 			.container-fluid
 				.row
 					.col-md-2.col-md-offset-2.text-center.col-sm-12
-						img.logo(src="assets/image/logo-la-republica.jpg", alt="Logo la republica")
+						img.logo.hidden-xs(src="assets/image/logo-la-republica.jpg", alt="Logo la republica")
 					.col-md-3.clearfix.col-xs-12.text-center
 						.t-day.cuadro-titular
 							span habla lideresa del nacionalismo
@@ -45,68 +45,68 @@ html(lang="en")
 							img.pull-left(src="assets/image/img_editorial_text.jpg", alt="")
 							span La corrupción, los orígenes<br>
 								small por: Gustavo Mohme Llona
-							img.pull-right(src="assets/image/img_author.jpg", alt="")
-				.row
-					.col-md-8.col-md-offset-2
-						nav
-							//- Fixed navbar
-							.navbar.navbar-default(role='navigation')
-								.navbar-header.page-scroll
-									button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-										span.sr-only Toggle navigation
-										span.icon-bar
-										span.icon-bar
-										span.icon-bar
-									a.navbar-brand.page-scroll(href='#page-top').hidden-sm.hidden-md.hidden-lg 	
-										h1 
-											img(src="assets/image/logo-la-republica.jpg", alt="")
-								.navbar-collapse.collapse(aria-exanded="true")
-									ul.nav.navbar-nav
-										li
-											a.page-scroll(href='#service') política
-												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
-										li
-											a.page-scroll(href='#portfolio') economía
-												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
-										li
-											a.page-scroll(href='#about') sociedad
-												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
-										li
-											a.page-scroll(href='#team') elecc. regionales
-												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
-										li
-											a.page-scroll(href='#contact') deportes
-												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
-										li
-											a.page-scroll(href='#contact') chhampions l.
-												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
-										li
-											a.page-scroll(href='#contact') espectáculos
-												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
-										li
-											a.page-scroll(href='#contact') ed. impresa
-												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
-										li
-											a.page-scroll(href='#contact') regionales
-												img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
-										li
-											a.page-scroll(href='#contact') más secciones
+							img.hidden-xs.pull-right(src="assets/image/img_author.jpg", alt="")
+		.container-fluid
+			.row
+				.col-md-8.col-md-offset-2.col-xs-12
+					nav
+						//- Fixed navbar
+						.navbar.navbar-default(role='navigation')
+							.navbar-header.page-scroll
+								button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+									span.sr-only Toggle navigation
+									span.icon-bar
+									span.icon-bar
+									span.icon-bar
+								a.navbar-brand.page-scroll(href='#page-top').hidden-sm.hidden-md.hidden-lg 	
+									img(src="assets/image/logo-la-republica4.jpg", alt="")
+							.navbar-collapse.collapse(aria-exanded="true")
+								ul.nav.navbar-nav
+									li
+										a.page-scroll(href='#service') política
+											img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+									li
+										a.page-scroll(href='#portfolio') economía
+											img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+									li
+										a.page-scroll(href='#about') sociedad
+											img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+									li
+										a.page-scroll(href='#team') elecc. regionales
+											img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+									li
+										a.page-scroll(href='#contact') deportes
+											img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+									li
+										a.page-scroll(href='#contact') chhampions l.
+											img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+									li
+										a.page-scroll(href='#contact') espectáculos
+											img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+									li
+										a.page-scroll(href='#contact') ed. impresa
+											img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+									li
+										a.page-scroll(href='#contact') regionales
+											img.hidden-xs(src="assets/image/main_menu_sep.jpg", alt="")
+									li
+										a.page-scroll(href='#contact') más secciones
 
-						//-nav-collapse
+					//-nav-collapse
 		section
 			.container-fluid
 				.row
-					.col-md-2.hidden-xs.hidden-sm
+					.col-md-2.hidden-xs.hidden-sm.text-center
 						img.publicity(src="assets/image/publicidad1.png", alt="")
-					.col-md-8
+					.col-md-8.mgtb-10
 						block contenido
-					.col-md-2.hidden-xs.hidden-sm
+					.col-md-2.hidden-xs.hidden-sm.text-center
 						img.publicity(src="assets/image/publicidad2.png", alt="")
 		footer
 			.cabecera.bck-gris
 				.container-fluid
 					.row.mgtb-30
-						.col-md-2.col-md-offset-2.border-right.col-xs-12.pdt-15
+						.col-md-2.col-md-offset-2.border-right.col-xs-12.pdt-15.grupo.text-center
 							.cont-footer
 								a.page-scroll(href='#page-top') 
 									img(src="assets/image/logo-grupo-la-republica.png", alt="")
@@ -115,7 +115,7 @@ html(lang="en")
 								small Todos los derechos reservados - 2015
 						.col-md-6
 							.row
-								.col-md-3.pdl-30.col-xs-6.pdt-15
+								.col-md-3.pdl-30.hidden-xs.col-sm-3.pdt-15
 									+enlace('e-footer','#','Rogeer Federer')
 									+enlace('e-footer','#','SBS')
 									+enlace('e-footer','#','Scarlett Johansson')
@@ -139,7 +139,7 @@ html(lang="en")
 									+enlace('e-footer','#','Scarlett Johansson')
 									+enlace('e-footer','#','Scotiabank')
 									
-								.col-md-3.pdl-30.col-xs-6.pdt-15
+								.col-md-3.pdl-30.hidden-xs.col-sm-3.pdt-15
 									+enlace('e-footer','#','Rogeer Federer')
 									+enlace('e-footer','#','SBS')
 									+enlace('e-footer','#','Scarlett Johansson')
@@ -162,7 +162,7 @@ html(lang="en")
 									+enlace('e-footer','#','SBS')
 									+enlace('e-footer','#','Scarlett Johansson')
 									+enlace('e-footer','#','Scotiabank')
-								.col-md-3.pdl-30.col-xs-6.pdt-15
+								.col-md-3.pdl-30.hidden-xs.col-sm-3.pdt-15
 									+enlace('e-footer','#','Rogeer Federer')
 									+enlace('e-footer','#','SBS')
 									+enlace('e-footer','#','Scarlett Johansson')
@@ -185,7 +185,7 @@ html(lang="en")
 									+enlace('e-footer','#','SBS')
 									+enlace('e-footer','#','Scarlett Johansson')
 									+enlace('e-footer','#','Scotiabank')
-								.col-md-3.pdl-30.col-xs-6.pdt-15
+								.col-md-3.pdl-30.hidden-xs.col-sm-3.pdt-15
 									+enlace('e-footer','#','Rogeer Federer')
 									+enlace('e-footer','#','SBS')
 									+enlace('e-footer','#','Scarlett Johansson')
@@ -210,7 +210,7 @@ html(lang="en")
 									+enlace('e-footer','#','Scotiabank')
 			.container-fluid.bck-gris
 				.row.final.mgtb-10
-					.col-md-8.col-md-offset-2
+					.col-md-8.col-md-offset-2.text-center
 						span Diarios del PAL:
 						+enlace('f-footer','#', 'Clarin')
 						+enlace('f-footer','#', 'La Tercera')

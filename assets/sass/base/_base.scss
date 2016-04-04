@@ -8,11 +8,12 @@ $black-light:#f1f1f1;
 $guinda-dark:#941010;
 
 body{
-	font-size:12px;
+	font-size:16px;
+	font-family:'PT Sans',sans-serif;
 }
 header{
 	font-family: 'Open Sans', sans-serif;
-	font-size:14px;
+	font-size:.9em;
 	text-transform:uppercase;
 	font-weight:700;
 }
@@ -47,7 +48,7 @@ header{
 	color:gray;
 	font-family: 'Open Sans', sans-serif;
 	font-weight:700;
-	font-size:.7em;
+	font-size:.8em;
 	margin-right:10px;
 	padding:1px 4px;
 	margin:5px 0px;
@@ -73,6 +74,7 @@ header{
 .social{
 	padding:0px 10px;
 	font-weight:700;
+	font-size:1.2em;
 	@extends .e-nwspaper;
 	&:hover{
 		text-decoration: none;
@@ -151,9 +153,9 @@ header{
 	}
 }
 .logo{
-	width:194px;
-	height: 36px;
     margin-top: 22px;
+    width: 100%;
+    max-width: 250px;
 }
 h6{
 	margin:0;
@@ -161,37 +163,21 @@ h6{
 .w-100{
 	width: 100%;
 }
-section{
-	.col-md-2{
-		img{
-			width: 100%;
-		}
-	}
-	
-}
 .e-footer{
 	display:block;
 }
 //navbar
 .navbar-header{
-	background-color:white;
-	border-radius:5px;
-	border:1px solid $guinda-dark;
+	background-color:$rojo;
 }
-.navbar-brand{
-	width:200px;
-	padding:10px;
-	h1{
-		margin:0;
-		img{
-			vertical-align: normal;
-		}
-	}
-}
+
 .navbar-default{
 	background-color:transparent;
 	border-color:transparent;
 	margin-bottom:0;
+}
+.navbar-toggle{
+	margin-right:8px;
 }
 .navbar-default .navbar-collapse{
 	background-color:$rojo;
@@ -200,7 +186,7 @@ section{
 
 	li>a{
 		color:white;
-		font-size: 10px;
+		font-size: 14px;
 		padding: 8px;
     	position:relative;
     	
@@ -213,18 +199,21 @@ section{
 }
 .publicity{
 	height:600px;
-
-		
+	width: 100%;
+    max-width: 150px;	
 }
 .fixed{
 	position:fixed;
 	top:0;
+	left:0;
+	background-color:$gris;
 	z-index: 100;
+	width:100%;
 }
 //footer
 footer{
+	font-size: 14px;
 		color:gray;
-		font-size: 1em;
 		img{
 			width: 150px;
 			margin: 0 10px;
@@ -237,16 +226,13 @@ footer{
 			color:black;
 			display: inline-block;
 		}
-		.cont-footer{
-			margin-top: 100%;
-    		transform: translatey(-70%);
-		}
 		.final{
 
 			a{
 				color:gray;
 				border-right:1px solid gray;
-				padding:0px 5px;
+				padding:0px 5px;	
+				font-size: 11px;
 				&:last-child{
 					border-right:none;
 				}
@@ -265,12 +251,82 @@ footer{
 }
 //responsive
 @media screen and (max-width:768px){
-	.fixed{
-		width: 90%;
+	body{
+		font-size: 16px;
+	}
+
+	header{
+		font-size: 1em;
+	}
+	.cuadro-titular{
+		width: 240px;
+	}
+	.navbar-brand{
+		float:none ;
+		display: inline-block;
+		padding: 0px;
+		img{
+			width: 160px;
+			margin-top: 15px;
+		}
+	}
+	.e-nwspaper,.social{
+		font-size: .7em;
+	}
+	.t-day{
+		padding-top:10px;
 	}
 	footer{
+		font-size: 14px;
 		.border-right{
 			text-align: center;
 		}
+		.grupo{
+			font-size: 15px;
+		}
+		
+
 	}
+}
+.slick-slider{
+	margin-bottom:0px;
+	img{
+		display: inline-block;
+	}
+}
+.slide-noticias{
+	.e-nwspaper{
+		padding:0px 20px;
+		background-image:url('../assets/image/bullet.gif');		
+		background-size:cover;
+		font-size: .7em;
+		text-transform: capitalize;
+		font-weight: normal;
+;
+	}
+	.item{
+		white-space: nowrap;
+		overflow: hidden;
+	}
+}
+.etiqueta{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	color:white;
+	background-color:black;
+	padding:3px 8px;
+}
+
+.form-control{
+	background-color:#EEEEEE;
+	border-top:2px solid gray;
+	border-left:2px solid gray;
+}
+.btn{
+	width:220px;
+	background-color:black;
+	color:white;
+	height:40px;
+	font-size:.9em;
 }

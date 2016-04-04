@@ -41,7 +41,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-8 col-md-offset-2 col-xs-12">
-          <nav>
+          <nav class="naveg">
             <div role="navigation" class="navbar navbar-default">
               <div class="navbar-header page-scroll">
                 <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#page-top" class="navbar-brand page-scroll hidden-sm hidden-md hidden-lg">	<img src="assets/image/logo-la-republica4.jpg" alt=""/></a>
@@ -108,13 +108,13 @@
                 <div class="col-md-8 col-md-offset-2">
                   <form>
                     <div class="form-group">
-                      <input type="name" id="nombre" placeholder="Nombres Completos" class="form-control"/>
+                      <input type="name" id="nombre" placeholder="Nombres Completos" required="required" class="form-control"/>
                     </div>
                     <div class="form-group">
-                      <input type="email" id="email" placeholder="Correo electrónico" class="form-control"/>
+                      <input type="email" id="email" placeholder="Correo electrónico" required="required" class="form-control"/>
                     </div>
                     <div class="form-group">
-                      <input type="phone" id="phone" placeholder="Teléfono" class="form-control"/><small>(Opcional)</small>
+                      <input type="phone" id="phone" placeholder="Teléfono" required="required" class="form-control"/><small>(Opcional)</small>
                     </div>
                   </form>
                 </div>
@@ -164,7 +164,7 @@
                 <div class="col-md-8 col-md-offset-2 text-center">
                   <form>
                     <div class="form-group">
-                      <textarea id="mensaje" rows="7" placeholder="Mensaje" class="form-control"></textarea>
+                      <textarea id="mensaje" rows="7" placeholder="Mensaje" required="required" class="form-control"></textarea>
                     </div>
                     <button type="submit" class="btn btn-enviar btn-primary e-nwspaper etiqueta">Enviar</button>
                   </form>

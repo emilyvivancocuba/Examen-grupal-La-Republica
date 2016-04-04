@@ -1,10 +1,7 @@
 mixin navegador(url,texto)
-	li
-		a(href=url) #{texto}
-
+	li: a(href=url) #{texto}
 mixin enlace(clase,url,texto)
 	a(href=url,class=clase) #{texto}
-
 mixin droplist
 	.dropdown
 		button.btn.btn-mas.dropdown-toggle(type="button", id="dropdownMenu1" data-toggle="dropdown", aria-haspopup="true", aria-expanded="true")
@@ -19,5 +16,154 @@ mixin droplist
 				a(href="blog.html") Blog
 			li 
 				a(href="contacto.html") Contacto
-
-
+mixin gray-box(subtitle1, subtitle2, imgURL)
+	.gray-box
+		.media
+			a(href="#").media-left
+				img(src=imgURL, alt=subtitle1, title=subtitle1).media-object.img-responsive.img-thumbnail
+			.media-body
+				h4.media-heading=subtitle1
+				h5= subtitle2
+					if block
+						block
+mixin blog-box(title, subtitle1, subtitle2, imgURL)
+	.col-xs-12.col-sm-4.col-md-4.col-lg-4
+		.box
+			p
+				small Lunes, 14 de julio de 2015
+			h3= title
+			+gray-box(subtitle1, subtitle2, imgURL)
+				if block
+					block
+mixin blog-gol-de-la-muerte
+	+blog-box('El gol de la muerte', 'Blog', 'LIBROS', 'assets/image/blog_avatar_01.jpg')
+	if block
+		block
+mixin columnista-1-gol-de-la-muerte
+	+blog-box('El gol de la muerte', 'Augusto Álvarez Rodrich', 'Claro y directo', 'assets/image/blog_avatar_01.jpg')
+	if block
+		block
+mixin columnista-2-gol-de-la-muerte
+	+blog-box('El gol de la muerte', 'Francisco Durand', 'Tiro al blanco', 'assets/image/blog_avatar_01.jpg')
+	if block
+		block
+mixin blog-dios-ha-muerto
+	+blog-box('Dios ha muerto... tengo las manos cubiertas de sangre', 'Blog', 'Ya lo pasado, PASADO', 'assets/image/blog_avatar_02.jpg')
+	if block
+		block
+mixin columnista-1-dios-ha-muerto
+	+blog-box('Dios ha muerto... tengo las manos cubiertas de sangre', 'Mirko Lauer', 'Observador', 'assets/image/blog_avatar_02.jpg')
+	if block
+		block
+mixin columnista-2-dios-ha-muerto
+	+blog-box('Dios ha muerto... tengo las manos cubiertas de sangre', 'Humberto Campodónico', 'Cristal de Mira', 'assets/image/blog_avatar_02.jpg')
+	if block
+		block
+mixin blog-tu-queso-favorito
+	+blog-box('¿Cuál es tu queso favorito?', 'Blog', 'Décimas cosas', 'assets/image/blog_avatar_03.jpg')
+	if block
+		block
+mixin columnista-1-tu-queso-favorito
+	+blog-box('¿Cuál es tu queso favorito?', 'Aldo Miyashiro', 'Chino de mi barrio', 'assets/image/blog_avatar_03.jpg')
+	if block
+		block
+mixin columnista-2-tu-queso-favorito
+	+blog-box('¿Cuál es tu queso favorito?', 'Javier Ágreda', 'Jaque Perpetuo', 'assets/image/blog_avatar_03.jpg')
+	if block
+		block
+mixin row-blog
+	.row
+		+blog-gol-de-la-muerte
+		+blog-dios-ha-muerto
+		+blog-tu-queso-favorito
+		if block
+			block
+mixin row-1-columnistas
+	.row
+		+columnista-1-gol-de-la-muerte
+		+columnista-1-dios-ha-muerto
+		+columnista-1-tu-queso-favorito
+		if block
+			block
+mixin row-2-columnistas
+	.row
+		+columnista-2-gol-de-la-muerte
+		+columnista-2-dios-ha-muerto
+		+columnista-2-tu-queso-favorito
+		if block
+			block
+mixin gray-box-col(subtitle1, subtitle2, imgURL)
+	.col-xs-12.col-sm-6.col-md-3.col-lg-3
+		+gray-box(subtitle1, subtitle2, imgURL)
+		if block
+			block
+mixin row-1-todos-los-columnistas
+	.row.row-columnistas
+		+gray-box-col('Francisco Durand', 'Tiro al blanco', 'assets/image/blog_avatar_02.jpg')
+		+gray-box-col('Humberto Campodónico', 'Cristal de Mira', 'assets/image/blog_avatar_03.jpg')
+		+gray-box-col('Javier Ágreda', 'Jaque Perpetuo', 'assets/image/blog_avatar_01.jpg')
+		+gray-box-col('Javier Ágreda', 'Jaque Perpetuo', 'assets/image/blog_avatar_02.jpg')
+		if block
+			block
+mixin row-2-todos-los-columnistas
+	.row.row-columnistas
+		+gray-box-col('Francisco Durand', 'Delito de Opinión', 'assets/image/blog_avatar_03.jpg')
+		+gray-box-col('Humberto Campodónico', 'Actualidad Económica - Oscar Dancourt', 'assets/image/blog_avatar_01.jpg')
+		+gray-box-col('Javier Ágreda', 'Mirada externa', 'assets/image/blog_avatar_02.jpg')
+		+gray-box-col('Javier Ágreda', 'Defensa', 'assets/image/blog_avatar_01.jpg')
+		if block
+			block
+mixin slidered
+	.row
+		.col-md-2.col-sm-2
+			span.e-nwspaper.etiqueta temas del día
+		.col-md-10.col-sm-10.text-center.bck-gris
+			.slide-noticias(data-slick='{"slidesToShow":4, "slidesToScroll":4')
+				marquee
+					.item
+						+enlace('e-nwspaper ','#','Globos de oro')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Youtube')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','PNP')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Charlie Hebdo')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','FC Barcelona')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Alianza Lima')
+				marquee
+					.item
+						+enlace('e-nwspaper ','#','Balón de Oro')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Twitter')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Balón de Oro')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Twitter')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Balón de Oro')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Twitter')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Oscars')
+				marquee
+					.item
+						+enlace('e-nwspaper ','#','Barbarie')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Premios Juventud')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Koala')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Bolsa')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Noticia')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Noticia')
+						img(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Noticia')
+mixin bannerupc
+	.row.pdt-15
+		img.w-100.hidden-xs.hidden-sm(src="assets/image/banner-header.jpg", alt="maestria upc")
+		if block
+			block

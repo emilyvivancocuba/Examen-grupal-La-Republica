@@ -165,6 +165,9 @@ header{
 		}
 	}
 }
+.dropdown-menu > li > a:hover{
+	background-color: #AD3737;	
+}
 .publicity{
 	height:600px;
 	width: 100%;
@@ -174,7 +177,7 @@ header{
 	position:fixed;
 	top:0;
 	left:0;
-	background-color:$gris;
+	background-color:transparent;
 	z-index: 100;
 	width:100%;
 }

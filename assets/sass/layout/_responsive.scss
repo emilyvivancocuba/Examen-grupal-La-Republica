@@ -1,0 +1,43 @@
+//responsive
+@media screen and (max-width:768px){
+	body{
+		font-size: 16px;
+	}
+
+	header{
+		font-size: 1em;
+	}
+	.cuadro-titular{
+		width: 240px;
+	}
+
+	.navbar-brand{
+		float:none ;
+		display: inline-block;
+		padding: 0px;
+		img{
+			width: 160px;
+			margin-top: 15px;
+		}
+	}
+	.e-nwspaper,.social{
+		font-size: .7em;
+	}
+	.t-day{
+		padding-top:10px;
+	}
+	.navbar-default .navbar-collapse{
+		li>a{
+			font-size: 14px;
+		}
+	}
+	footer{
+		font-size: 14px;
+		.border-right{
+			text-align: center;
+		}
+		.grupo{
+			font-size: 15px;
+		}
+	}
+}

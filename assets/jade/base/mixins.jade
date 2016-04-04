@@ -5,3 +5,19 @@ mixin navegador(url,texto)
 mixin enlace(clase,url,texto)
 	a(href=url,class=clase) #{texto}
 
+mixin droplist
+	.dropdown
+		button.btn.btn-mas.dropdown-toggle(type="button", id="dropdownMenu1" data-toggle="dropdown", aria-haspopup="true", aria-expanded="true")
+			span más secciones
+			span.caret
+		ul.dropdown-menu(aria-labelledby="dropdownMenu1")
+			li
+				a(href="home.html") home
+			li 
+				a(href="columnistas.html") Columnistas
+			li 
+				a(href="blog.html") Blog
+			li 
+				a(href="contacto.html") Contacto
+
+

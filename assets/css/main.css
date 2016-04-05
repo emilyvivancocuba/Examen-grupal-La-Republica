@@ -6395,15 +6395,17 @@ footer {
     font-size: 16px;
     color: white;
     bottom: 0;
-    padding: 20px;
+    padding: 10px;
     margin: 0;
     font-weight: 400;
-    font-family: "Montserrat"; }
+    font-family: "Montserrat";
+    font-size: 24px; }
 
 .small .home-preliminar {
   margin-bottom: 15px; }
   .small .home-preliminar p {
-    font-size: 20px; }
+    font-size: 18px;
+    font-weight: 700; }
 
 .home-separador {
   border-top: 5px solid #aa1801; }

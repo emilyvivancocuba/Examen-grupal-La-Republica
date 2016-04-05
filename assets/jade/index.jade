@@ -1,340 +1,296 @@
-include ./helpers/mixins.jade
-include ./base/base.jade
-        .container-fluid
-            .row
-                .col-sm-2
-                .col-sm-8
+extends ./base/base.jade
+
+block titleDocument
+    title Contacto
+
+block contenido
+    .container-fluid
+        +slidered
+        +bannerupc
+        .row
+            .text-center.home-title
+                h1 GUERRA EN LA MUNICIPALIDAD DE LIMA METROPOLITANA
+        .row
+            .text-center.enlace-red
+                +redes-sub('Hace 12 minutos','POLÍTICA',0,1)
+            .col-sm-6
+                +home-titular("assets/image/img_grid_principal.jpg",'JNE impulsará en favor de la aprobación de la Reforma Electoral')
+            .col-sm-6.small
+                +home-titular("assets/image/img_grid_secundario.jpg",'Martín Belaunde Lossi:Empresas vinculadas al empresario contrataron por S/. 3000 millones | FOTOS')
+                +home-titular("assets/image/img_grid_secundario.jpg",'Sub 20:Perú vs. Paraguay:bicolor empató 1-1 y pasó al hexagonal final del Sudameriano | VIDEO')
+
+        .bg-gray-sider
+            +home-separador('COLUMNISTAS')
+        
+
+            .bg-gray-sider
+            
+
+                .slider.single-item.responsive.bg-gray-sider
+                    +my-slyder("img_author_columnista",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_blogueros",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_blogueros",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_aside_author",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_aside_author",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_aside_author",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_aside_author",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_aside_author",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_aside_author",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                    +my-slyder("img_aside_author",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
+                            
+        .row
+            .col-sm-8
+                .row
+                    +noticias-home('Mercado de Pases 2015',"assets/image/img_especiales.jpg",'Mercado de pases 2015: altas, bajas y rumores de los equipos peruanos')
+                    +noticias-home('Régimen laboral juvenil',"assets/image/img_especiales_aside.jpg",'Ollanta Humala: Los que han perdido, más allá de tambores y panderetas, son 2 millones de jóvenes | VIDEO')
+                    +noticias-home('Champions League',"assets/image/img_especiales.jpg",'¿Podrá el Real Madrid conseguir la "Undécima"?')
+                    +noticias-home('Super Bowl',"assets/image/img_especiales_aside.jpg",'NFL al ganar 28-24 a Seahawks | VIDEO')
+                    .main
+                        .col-sm-12.ultima-noticias
+                            h4.title-noticia ULTIMAS NOTICIAS
+                                img.pdl-15(src="assets/image/double-arrow-bottom.png")
+                            +ultima-noticia('Emma Watson protagonizará "La bella y la bestia" |VIDEO',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',10,'ESPECTÁULOS',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Roque Benavides respalda proyecto Tía María y espera que Conga se socialice',"assets/image/img_news.jpg",'Zenaida Condori Contreras Arequipa Para el presidente de la Compañía de Minas Buenaventura, Roque Benavides, el proyecto Tía Maía, que promueve Southern Perú, ya debe...',0,'AREQUIPA',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('YouTube: hombre finge ahogarse y su perro lo rescata | FOTOS',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',0,'ESPECTÁULOS',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Real Madrid: Cristiano Ronaldo fue sancionado con dos partidos y si estará contra el Atletico de Madrid',"assets/image/img_news.jpg",'Después de la pésima actitud de Cristiano Ronald, al agredir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité d Competición ha llegado a la...',0,'AREQUIPA',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Emma Watson protagonizará "La bella y la bestia" |VIDEO',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',10,'ESPECTÁULOS',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Roque Benavides respalda proyecto Tía María y espera que Conga se socialice',"assets/image/img_news.jpg",'Zenaida Condori Contreras Arequipa Para el presidente de la Compañía de Minas Buenaventura, Roque Benavides, el proyecto Tía Maía, que promueve Southern Perú, ya debe...',0,'AREQUIPA',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('YouTube: hombre finge ahogarse y su perro lo rescata | FOTOS',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',0,'ESPECTÁULOS',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Real Madrid: Cristiano Ronaldo fue sancionado con dos partidos y si estará contra el Atletico de Madrid',"assets/image/img_news.jpg",'Después de la pésima actitud de Cristiano Ronald, al agredir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité d Competición ha llegado a la...',0,'AREQUIPA',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Emma Watson protagonizará "La bella y la bestia" |VIDEO',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',10,'ESPECTÁULOS',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Roque Benavides respalda proyecto Tía María y espera que Conga se socialice',"assets/image/img_news.jpg",'Zenaida Condori Contreras Arequipa Para el presidente de la Compañía de Minas Buenaventura, Roque Benavides, el proyecto Tía Maía, que promueve Southern Perú, ya debe...',0,'AREQUIPA',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('YouTube: hombre finge ahogarse y su perro lo rescata | FOTOS',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',0,'ESPECTÁULOS',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Real Madrid: Cristiano Ronaldo fue sancionado con dos partidos y si estará contra el Atletico de Madrid',"assets/image/img_news.jpg",'Después de la pésima actitud de Cristiano Ronald, al agredir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité d Competición ha llegado a la...',0,'AREQUIPA',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Emma Watson protagonizará "La bella y la bestia" |VIDEO',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',10,'ESPECTÁULOS',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Roque Benavides respalda proyecto Tía María y espera que Conga se socialice',"assets/image/img_news.jpg",'Zenaida Condori Contreras Arequipa Para el presidente de la Compañía de Minas Buenaventura, Roque Benavides, el proyecto Tía Maía, que promueve Southern Perú, ya debe...',0,'AREQUIPA',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('YouTube: hombre finge ahogarse y su perro lo rescata | FOTOS',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',0,'ESPECTÁULOS',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Real Madrid: Cristiano Ronaldo fue sancionado con dos partidos y si estará contra el Atletico de Madrid',"assets/image/img_news.jpg",'Después de la pésima actitud de Cristiano Ronald, al agredir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité d Competición ha llegado a la...',0,'AREQUIPA',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Emma Watson protagonizará "La bella y la bestia" |VIDEO',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',10,'ESPECTÁULOS',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Roque Benavides respalda proyecto Tía María y espera que Conga se socialice',"assets/image/img_news.jpg",'Zenaida Condori Contreras Arequipa Para el presidente de la Compañía de Minas Buenaventura, Roque Benavides, el proyecto Tía Maía, que promueve Southern Perú, ya debe...',0,'AREQUIPA',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('YouTube: hombre finge ahogarse y su perro lo rescata | FOTOS',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',0,'ESPECTÁULOS',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Real Madrid: Cristiano Ronaldo fue sancionado con dos partidos y si estará contra el Atletico de Madrid',"assets/image/img_news.jpg",'Después de la pésima actitud de Cristiano Ronald, al agredir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité d Competición ha llegado a la...',0,'AREQUIPA',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Emma Watson protagonizará "La bella y la bestia" |VIDEO',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',10,'ESPECTÁULOS',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Roque Benavides respalda proyecto Tía María y espera que Conga se socialice',"assets/image/img_news.jpg",'Zenaida Condori Contreras Arequipa Para el presidente de la Compañía de Minas Buenaventura, Roque Benavides, el proyecto Tía Maía, que promueve Southern Perú, ya debe...',0,'AREQUIPA',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('YouTube: hombre finge ahogarse y su perro lo rescata | FOTOS',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',0,'ESPECTÁULOS',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Real Madrid: Cristiano Ronaldo fue sancionado con dos partidos y si estará contra el Atletico de Madrid',"assets/image/img_news.jpg",'Después de la pésima actitud de Cristiano Ronald, al agredir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité d Competición ha llegado a la...',0,'AREQUIPA',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Emma Watson protagonizará "La bella y la bestia" |VIDEO',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',10,'ESPECTÁULOS',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Roque Benavides respalda proyecto Tía María y espera que Conga se socialice',"assets/image/img_news.jpg",'Zenaida Condori Contreras Arequipa Para el presidente de la Compañía de Minas Buenaventura, Roque Benavides, el proyecto Tía Maía, que promueve Southern Perú, ya debe...',0,'AREQUIPA',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('YouTube: hombre finge ahogarse y su perro lo rescata | FOTOS',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',0,'ESPECTÁULOS',1,0)
+                            hr.separador-gray
+                            +ultima-noticia('Real Madrid: Cristiano Ronaldo fue sancionado con dos partidos y si estará contra el Atletico de Madrid',"assets/image/img_news.jpg",'Después de la pésima actitud de Cristiano Ronald, al agredir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité d Competición ha llegado a la...',0,'AREQUIPA',1,0)
+                            hr.separador-gray
+
+            .col-sm-4.hidden-sm
+                .hol
+                    img.w-100(src="assets/image/banner-aside-home.jpg")
+                    .suscribe.border-especial.text-center
+                        .suscribe-content
+                            +img-logo("img_sucribe")
+                            h4 Suscríbete
+                                span a nuestro boletín
+                            .contenido-suscribe
+                                input.w-100(type="password" )
+                                a(href="").w-100.btn.btn-danger.boton-guinda SUSCRIBIRSE
+
+                    .border
+                        .text-center
+                            +imagen("logo_aweita")
+                        .row
+                            +aside-home("img_aweita","Juan RománRiquelme el adiós +coma Último 10' de Argentina")
+                        .row
+                            +aside-home("img_aweita","Lewis Carroll: un día como de 'Alicia en el ")
+                        .row    
+                            +aside-home("img_aweita","Juan RománRiquelme el adiós 'Ultimo 10' de Argentina")
+                        .row
+                            +aside-home("img_aweita", "Gameplay de 'Dead Kings', el descargable premiun de 'Assassin's'")
+                        .text-center
+                            span Más en 
+                                a.violeta(href="") Aweita.pe
+                        img.bg-violeta(assets/image/nota_galeria_border.png)
                     .row
-                        .text-center.home-title
-                            h1 GUERRA EN LA MUNICIPALIDAD DE LIMA METROPOLITANA
+                        +home-separador('FOTOS DESTACADAS')
+                    .noticia-aside
+                        .border-image
+                            +imagen-100("img_fotodes_prominent")
+                        p.pd-5.font-monstserrat-sub Líneas de Nasca: admiten prisión preventiva de 6 meses para activista de Greenpeace | FOTOS
+                    .noticia
+                        .row
+                            +aside-home("img_fotodes", "Uchuraccay: El pueblo que recibe con flores a quienes llegan a pie FOTOS")
+                        .row
+                            +aside-home("img_fotodes", "Uchuraccay: El pueblo que recibe con flores a quienes llegan a pie FOTOS")
+                        .row
+                            +aside-home("img_fotodes", 'Alianza Lima vs Fénix: ítimos ganaron 1-0 en "Noche Blanquiazul" | VIDEO Y FOTOS')
+                        .row
+                            +aside-home("img_fotodes", "Uchuraccay: El pueblo que recibe con flores a quienes llegan a pie FOTOS")
+                    hr.separador-gray
+                    +home-separador('ESPECIALES')
                     .row
-                        .text-center.enlace-red
-                            +redes-sub('Hace 12 minutos','POLÍTICA',0,1)
-                        .col-sm-6
-                            +home-titular("assets/image/img_grid_principal.jpg",'JNE impulsará en favor de la aprobación de la Reforma Electoral')
-                        .col-sm-6.small
-                            +home-titular("assets/image/img_grid_secundario.jpg",'Martín Belaunde Lossi:Empresas vinculadas al empresario contrataron por S/. 3000 millones | FOTOS')
-                            +home-titular("assets/image/img_grid_secundario.jpg",'Sub 20:Perú vs. Paraguay:bicolor empató 1-1 y pasó al hexagonal final del Sudameriano | VIDEO')
-
-                    .bg-gray-sider
-                        +home-separador('COLUMNISTAS')
-                    
-
-                        .bg-gray-sider
-                        
-
-                            .slider.single-item.responsive.bg-gray-sider
-                                +my-slyder("img_author_columnista",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_blogueros",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_blogueros",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_aside_author",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_aside_author",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_aside_author",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_aside_author",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_aside_author",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_aside_author",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_aside_author",1,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                +my-slyder("img_aside_author",0,"Mario Vargas Llosa","Megarrenuncia apulpinante")
-                                        
+                        +imagen-title("img_especiales_aside",'Régimen laboral juvenil')
+                        +imagen-title("img_especiales_aside","COP 20")
+                        +imagen-title("img_especiales_aside","Concentración de Medios")
+                        +imagen-title("img_especiales_aside","Especies peruanas en peligro de extinción")
+                    hr.separador-gray
+                    +home-separador('CARLINCATURA DEL DÍA')
                     .row
-                        .col-sm-8
-                            .row
-                                +noticias-home('Mercado de Pases 2015',"assets/image/img_especiales.jpg",'Mercado de pases 2015: altas, bajas y rumores de los equipos peruanos')
-                                +noticias-home('Régimen laboral juvenil',"assets/image/img_especiales_aside.jpg",'Ollanta Humala: Los que han perdido, más allá de tambores y panderetas, son 2 millones de jóvenes | VIDEO')
-                                +noticias-home('Champions League',"assets/image/img_especiales.jpg",'¿Podrá el Real Madrid conseguir la "Undécima"?')
-                                +noticias-home('Super Bowl',"assets/image/img_especiales_aside.jpg",'NFL al ganar 28-24 a Seahawks | VIDEO')
-                                .main
-                                    .col-sm-12.ultima-noticias
-                                        h4 ULTIMAS NOTICIAS
-                                            img(src="assets/image/double-arrow-bottom.png")
-                                        +ultima-noticia('Emma Watson protagonizará "La bella y la bestia" |VIDEO',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',10,'ESPECTÁULOS',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Roque Benavides respalda proyecto Tía María y espera que Conga se socialice',"assets/image/img_news.jpg",'Zenaida Condori Contreras Arequipa Para el presidente de la Compañía de Minas Buenaventura, Roque Benavides, el proyecto Tía Maía, que promueve Southern Perú, ya debe...',0,'AREQUIPA',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('YouTube: hombre finge ahogarse y su perro lo rescata | FOTOS',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',0,'ESPECTÁULOS',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Real Madrid: Cristiano Ronaldo fue sancionado con dos partidos y si estará contra el Atletico de Madrid',"assets/image/img_news.jpg",'Después de la pésima actitud de Cristiano Ronald, al agredir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité d Competición ha llegado a la...',0,'AREQUIPA',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Emma Watson protagonizará "La bella y la bestia" |VIDEO',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',10,'ESPECTÁULOS',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Roque Benavides respalda proyecto Tía María y espera que Conga se socialice',"assets/image/img_news.jpg",'Zenaida Condori Contreras Arequipa Para el presidente de la Compañía de Minas Buenaventura, Roque Benavides, el proyecto Tía Maía, que promueve Southern Perú, ya debe...',0,'AREQUIPA',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('YouTube: hombre finge ahogarse y su perro lo rescata | FOTOS',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',0,'ESPECTÁULOS',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Real Madrid: Cristiano Ronaldo fue sancionado con dos partidos y si estará contra el Atletico de Madrid',"assets/image/img_news.jpg",'Después de la pésima actitud de Cristiano Ronald, al agredir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité d Competición ha llegado a la...',0,'AREQUIPA',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Emma Watson protagonizará "La bella y la bestia" |VIDEO',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',10,'ESPECTÁULOS',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Roque Benavides respalda proyecto Tía María y espera que Conga se socialice',"assets/image/img_news.jpg",'Zenaida Condori Contreras Arequipa Para el presidente de la Compañía de Minas Buenaventura, Roque Benavides, el proyecto Tía Maía, que promueve Southern Perú, ya debe...',0,'AREQUIPA',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('YouTube: hombre finge ahogarse y su perro lo rescata | FOTOS',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',0,'ESPECTÁULOS',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Real Madrid: Cristiano Ronaldo fue sancionado con dos partidos y si estará contra el Atletico de Madrid',"assets/image/img_news.jpg",'Después de la pésima actitud de Cristiano Ronald, al agredir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité d Competición ha llegado a la...',0,'AREQUIPA',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Emma Watson protagonizará "La bella y la bestia" |VIDEO',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',10,'ESPECTÁULOS',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Roque Benavides respalda proyecto Tía María y espera que Conga se socialice',"assets/image/img_news.jpg",'Zenaida Condori Contreras Arequipa Para el presidente de la Compañía de Minas Buenaventura, Roque Benavides, el proyecto Tía Maía, que promueve Southern Perú, ya debe...',0,'AREQUIPA',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('YouTube: hombre finge ahogarse y su perro lo rescata | FOTOS',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',0,'ESPECTÁULOS',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Real Madrid: Cristiano Ronaldo fue sancionado con dos partidos y si estará contra el Atletico de Madrid',"assets/image/img_news.jpg",'Después de la pésima actitud de Cristiano Ronald, al agredir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité d Competición ha llegado a la...',0,'AREQUIPA',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Emma Watson protagonizará "La bella y la bestia" |VIDEO',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',10,'ESPECTÁULOS',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Roque Benavides respalda proyecto Tía María y espera que Conga se socialice',"assets/image/img_news.jpg",'Zenaida Condori Contreras Arequipa Para el presidente de la Compañía de Minas Buenaventura, Roque Benavides, el proyecto Tía Maía, que promueve Southern Perú, ya debe...',0,'AREQUIPA',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('YouTube: hombre finge ahogarse y su perro lo rescata | FOTOS',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',0,'ESPECTÁULOS',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Real Madrid: Cristiano Ronaldo fue sancionado con dos partidos y si estará contra el Atletico de Madrid',"assets/image/img_news.jpg",'Después de la pésima actitud de Cristiano Ronald, al agredir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité d Competición ha llegado a la...',0,'AREQUIPA',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Emma Watson protagonizará "La bella y la bestia" |VIDEO',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',10,'ESPECTÁULOS',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Roque Benavides respalda proyecto Tía María y espera que Conga se socialice',"assets/image/img_news.jpg",'Zenaida Condori Contreras Arequipa Para el presidente de la Compañía de Minas Buenaventura, Roque Benavides, el proyecto Tía Maía, que promueve Southern Perú, ya debe...',0,'AREQUIPA',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('YouTube: hombre finge ahogarse y su perro lo rescata | FOTOS',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',0,'ESPECTÁULOS',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Real Madrid: Cristiano Ronaldo fue sancionado con dos partidos y si estará contra el Atletico de Madrid',"assets/image/img_news.jpg",'Después de la pésima actitud de Cristiano Ronald, al agredir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité d Competición ha llegado a la...',0,'AREQUIPA',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Emma Watson protagonizará "La bella y la bestia" |VIDEO',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',10,'ESPECTÁULOS',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Roque Benavides respalda proyecto Tía María y espera que Conga se socialice',"assets/image/img_news.jpg",'Zenaida Condori Contreras Arequipa Para el presidente de la Compañía de Minas Buenaventura, Roque Benavides, el proyecto Tía Maía, que promueve Southern Perú, ya debe...',0,'AREQUIPA',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('YouTube: hombre finge ahogarse y su perro lo rescata | FOTOS',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',0,'ESPECTÁULOS',1,0)
-                                        hr.separador-gray
-                                        +ultima-noticia('Real Madrid: Cristiano Ronaldo fue sancionado con dos partidos y si estará contra el Atletico de Madrid',"assets/image/img_news.jpg",'Después de la pésima actitud de Cristiano Ronald, al agredir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité d Competición ha llegado a la...',0,'AREQUIPA',1,0)
-                                        hr.separador-gray
-
-                        .col-sm-4.hidden-sm
-                            .hol
-                                img.w-100(src="assets/image/banner-aside-home.jpg")
-                                .suscribe.border-especial.text-center
-                                    .suscribe-content
-                                        +img-logo("img_sucribe")
-                                        h4 Suscríbete
-                                            span a nuestro boletín
-                                        .contenido-suscribe
-                                            input.w-100(type="password" )
-                                            a(href="").w-100.btn.btn-danger.boton-guinda SUSCRIBIRSE
-
-                                .border
+                        .col-sm-12.text-center
+                            h5.font-monstserrat-sub Carlincaturas 30-01-2015
+                            +imagen("img_carlincatura_sd")
+                            h6.font-monstserrat-sub.rojo Todas las Carlinturas
+                    hr.separador-gray
+                    .bloqueros-home
+                        +media-bloqueros("img_blogueros",0,"Charlie Hebdo, historia que no debe repetirse")
+                        +media-bloqueros("img_blogueros",0,"El único pulpin es Humala")
+                        +media-bloqueros("img_blogueros",0,"Dios ha muerto... tengo las manos")
+                        +media-bloqueros("img_blogueros",0,"El único pulpin es Humala")
+                        +media-bloqueros("img_blogueros",0,"Charlie Hebdo, historia que no debe repetirse")
+                        +media-bloqueros("img_blogueros",0,"El único pulpin es Humala")
+                        +media-bloqueros("img_blogueros",0,"Dios ha muerto... tengo las manos")
+                        +media-bloqueros("img_blogueros",0,"El único pulpin es Humala")
+                    .row.text-center
+                        h6.rojo.font-monstserrat-sub Todos los blogs
+                    +home-separador('EDICIÓN IMPRESA')
+                    .edicion
+                        h5.text-center La República - Lima
+                        .edicion-completa.mb-10
+                            +imagen-100("img_impreso_sd_prominent")
+                        .row.mb-10
+                            .col-sm-5
+                                +imagen("img_impreso_sd")
+                            .col-sm-7
+                                .display-flex-center
+                                    h5.font-monstserrat-sub Extorsionan a menores en colegios
+                                    a.rojo(href="") La Republica - Norte
+                        .row.mb-10
+                            .col-sm-5
+                                +imagen("img_impreso_sd")
+                            .col-sm-7
+                                .display-flex-center
+                                    h5.font-monstserrat-sub Lluvias en Arequipa inundan casas y causan caos en calles
+                                    a.rojo(href="") La Republica - 
+                        .row.mb-10
+                            .col-sm-5
+                                +imagen("img_impreso_sd")
+                            .col-sm-7
+                                .display-flex-center
+                                    h5.font-monstserrat-sub El ojo de Oblitas
+                                    a.rojo(href="") Domingo
+                        hr.separador-gray
+                        +home-separador('INFOGRAFÍAS')
+                        .row
+                            +imagen-title("img_especiales_aside","Histórico cierre de frontera")
+                            +imagen-title("img_especiales_aside","Evolución de la pobreza e indigencia en América Latina")
+                    hr.separador-gray
+                    .row
+                        .contenedor.col-sm-12
+                            .border-especial.suscribe
+                                +img-logo("img_pregunta")
+                                .suscribe-content
+                                    h5.text-center La pregunta de hoy
+                                    p ¿Cree usted que la premier Ana Jara debe renunciar?
                                     .text-center
-                                        +imagen("logo_aweita")
-                                    .row
-                                        +aside-home("img_aweita","Juan RománRiquelme el adiós +coma Último 10' de Argentina")
-                                    .row
-                                        +aside-home("img_aweita","Lewis Carroll: un día como de 'Alicia en el ")
-                                    .row    
-                                        +aside-home("img_aweita","Juan RománRiquelme el adiós 'Ultimo 10' de Argentina")
-                                    .row
-                                        +aside-home("img_aweita", "Gameplay de 'Dead Kings', el descargable premiun de 'Assassin's'")
+                                        input(type='radio' name='agreement' ) 
+                                        span Sí
                                     .text-center
-                                        span Más en 
-                                            a.violeta(href="") Aweita.pe
-                                    img.bg-violeta(assets/image/nota_galeria_border.png)
+                                        input(type='radio' name='agreement' ) 
+                                        span No
+                                    p.text-center
+                                        a(href="").btn.btn-danger.boton-guinda VOTAR
+                                    h6.rojo Ver resultados
+                            .border-especial.suscribe.pt-0
+                                .suscribe-content
+                                    h6.text-center La pregunta de ayer
+                                    p ¿Cree usted se militarizó la conmemoración del fallo de la Haya en Lima?
+                                    .progress
+                                        .progress-bar.progress-bar-success(style="width:55%") 55%
+                                        .progress-bar.progress-bar-warning.progress-bar-striped(style="width:45%") 
+                                    .progress
+                                        .progress-bar.progress-bar-success(style="width:25%")  25%
+                                        .progress-bar.progress-bar-warning.progress-bar-striped(style="width:75%")
+                                    h6 Ver preguntas pasadas
+                            .border
+                                .text-center
+                                    +imagen("logo_libero")
                                 .row
-                                    +home-separador('FOTOS DESTACADAS')
-                                .noticia-aside
-                                    .border-image
-                                        +imagen-100("img_fotodes_prominent")
-                                    p.pd-5.font-monstserrat-sub Líneas de Nasca: admiten prisión preventiva de 6 meses para activista de Greenpeace | FOTOS
-                                .noticia
-                                    .row
-                                        +aside-home("img_fotodes", "Uchuraccay: El pueblo que recibe con flores a quienes llegan a pie FOTOS")
-                                    .row
-                                        +aside-home("img_fotodes", "Uchuraccay: El pueblo que recibe con flores a quienes llegan a pie FOTOS")
-                                    .row
-                                        +aside-home("img_fotodes", 'Alianza Lima vs Fénix: ítimos ganaron 1-0 en "Noche Blanquiazul" | VIDEO Y FOTOS')
-                                    .row
-                                        +aside-home("img_fotodes", "Uchuraccay: El pueblo que recibe con flores a quienes llegan a pie FOTOS")
-                                hr.separador-gray
-                                +home-separador('ESPECIALES')
+                                    +aside-home("aside-image-thumb-01", "Fiorentina empató 1-1 en su visita al Genoa con gran actuación de Juan Vargas [VIDEO]")
                                 .row
-                                    +imagen-title("img_especiales_aside",'Régimen laboral juvenil')
-                                    +imagen-title("img_especiales_aside","COP 20")
-                                    +imagen-title("img_especiales_aside","Concentración de Medios")
-                                    +imagen-title("img_especiales_aside","Especies peruanas en peligro de extinción")
-                                hr.separador-gray
-                                +home-separador('CARLINCATURA DEL DÍA')
+                                    +aside-home("aside-image-thumb-01", "Jefferson Farfán: Schalke 04 tampoco sabe cuándo volverá a las canchas [FOTOS]")
                                 .row
-                                    .col-sm-12.text-center
-                                        h5.font-monstserrat-sub Carlincaturas 30-01-2015
-                                        +imagen("img_carlincatura_sd")
-                                        h6.font-monstserrat-sub.rojo Todas las Carlinturas
-                                hr.separador-gray
-                                .bloqueros-home
-                                    +media-bloqueros("img_blogueros",0,"Charlie Hebdo, historia que no debe repetirse")
-                                    +media-bloqueros("img_blogueros",0,"El único pulpin es Humala")
-                                    +media-bloqueros("img_blogueros",0,"Dios ha muerto... tengo las manos")
-                                    +media-bloqueros("img_blogueros",0,"El único pulpin es Humala")
-                                    +media-bloqueros("img_blogueros",0,"Charlie Hebdo, historia que no debe repetirse")
-                                    +media-bloqueros("img_blogueros",0,"El único pulpin es Humala")
-                                    +media-bloqueros("img_blogueros",0,"Dios ha muerto... tengo las manos")
-                                    +media-bloqueros("img_blogueros",0,"El único pulpin es Humala")
-                                .row.text-center
-                                    h6.rojo.font-monstserrat-sub Todos los blogs
-                                +home-separador('EDICIÓN IMPRESA')
-                                .edicion
-                                    h5.text-center La República - Lima
-                                    .edicion-completa.mb-10
-                                        +imagen-100("img_impreso_sd_prominent")
-                                    .row.mb-10
-                                        .col-sm-5
-                                            +imagen("img_impreso_sd")
-                                        .col-sm-7
-                                            .display-flex-center
-                                                h5.font-monstserrat-sub Extorsionan a menores en colegios
-                                                a.rojo(href="") La Republica - Norte
-                                    .row.mb-10
-                                        .col-sm-5
-                                            +imagen("img_impreso_sd")
-                                        .col-sm-7
-                                            .display-flex-center
-                                                h5.font-monstserrat-sub Lluvias en Arequipa inundan casas y causan caos en calles
-                                                a.rojo(href="") La Republica - 
-                                    .row.mb-10
-                                        .col-sm-5
-                                            +imagen("img_impreso_sd")
-                                        .col-sm-7
-                                            .display-flex-center
-                                                h5.font-monstserrat-sub El ojo de Oblitas
-                                                a.rojo(href="") Domingo
-                                    hr.separador-gray
-                                    +home-separador('INFOGRAFÍAS')
-                                    .row
-                                        +imagen-title("img_especiales_aside","Histórico cierre de frontera")
-                                        +imagen-title("img_especiales_aside","Evolución de la pobreza e indigencia en América Latina")
-                                hr.separador-gray
+                                    +aside-home("aside-image-thumb-01", "Barcelona vs Villarreal: culés ganaron 3-2 con goles de Lionel Messi y Neymar por Liga BBVA [VIDEO]")
                                 .row
-                                    .contenedor.col-sm-12
-                                        .border-especial.suscribe
-                                            +img-logo("img_pregunta")
-                                            .suscribe-content
-                                                h5.text-center La pregunta de hoy
-                                                p ¿Cree usted que la premier Ana Jara debe renunciar?
-                                                .text-center
-                                                    input(type='radio' name='agreement' ) 
-                                                    span Sí
-                                                .text-center
-                                                    input(type='radio' name='agreement' ) 
-                                                    span No
-                                                p.text-center
-                                                    a(href="").btn.btn-danger.boton-guinda VOTAR
-                                                h6.rojo Ver resultados
-                                        .border-especial.suscribe.pt-0
-                                            .suscribe-content
-                                                h6.text-center La pregunta de ayer
-                                                p ¿Cree usted se militarizó la conmemoración del fallo de la Haya en Lima?
-                                                .progress
-                                                    .progress-bar.progress-bar-success(style="width:55%") 55%
-                                                    .progress-bar.progress-bar-warning.progress-bar-striped(style="width:45%") 
-                                                .progress
-                                                    .progress-bar.progress-bar-success(style="width:25%")  25%
-                                                    .progress-bar.progress-bar-warning.progress-bar-striped(style="width:75%")
-                                                h6 Ver preguntas pasadas
-                                        .border
-                                            .text-center
-                                                +imagen("logo_libero")
-                                            .row
-                                                +aside-home("aside-image-thumb-01", "Fiorentina empató 1-1 en su visita al Genoa con gran actuación de Juan Vargas [VIDEO]")
-                                            .row
-                                                +aside-home("aside-image-thumb-01", "Jefferson Farfán: Schalke 04 tampoco sabe cuándo volverá a las canchas [FOTOS]")
-                                            .row
-                                                +aside-home("aside-image-thumb-01", "Barcelona vs Villarreal: culés ganaron 3-2 con goles de Lionel Messi y Neymar por Liga BBVA [VIDEO]")
-                                            .row
-                                                +aside-home("aside-image-thumb-01", "Perú cayó 3-1 ante Colomba por el hexagonal final del Sudamericano Sub 20 [VIDEO/FOTOS]")
-                                            .text-center
-                                                a.position(href="") Mas en 
-                                                    span.rojo Libero.pe
-                                        .border
-                                            .text-center
-                                                +imagen("logo_popular")
-                                            .row
-                                                +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
-                                            .row
-                                                +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
-                                            .row
-                                                +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
-                                            .row
-                                                +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
-                                            .text-center
-                                                a.position(href="") Mas en 
-                                                    span.rojo elPopular.pe
-                                        .border.mb-10
-                                            .text-center
-                                                +imagen("logo_wapa")
-                                            .row
-                                                +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
-                                            .row
-                                                +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
-                                            .row
-                                                +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
-                                            .row
-                                                +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
-                                            .text-center
-                                                a.position(href="") Mas en 
-                                                    span.rojo Wapa.pe
-                                        .suscribe
-                                            .text-center
-                                                +img-logo("img_reporteroc")
-                                            .suscribe-content
-                                                h5.text-center Reportero cuidadano
-                                                img.w-100(src="assets/image/img_sd_reporteroc.jpg")
-                                                h6 Estacionamiento indebido
-                                                p ¿Está permitido que dejen su auto en reiteradas ocasiones tada la noche en la puerta de tu casa? Placa DG6232, eso que antes lo dejaba entre la vereda y mi puerta.
-                                            p.text-center.pd-5
-                                                a(href="").btn.btn-danger.boton-guinda ENVIAR FOTOS
-                                            h6.text-center Más fotos
-                .col-sm-2
-
-
-
-
-
-
-
-
-                                                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        script(src='assets/js/jquery.js')
-        script(src='http://code.jquery.com/jquery-1.11.2.min.js')
-        script(src='http://code.jquery.com/jquery-migrate-1.2.1.min.js')
-        script(type='text/javascript', src='assets/js/bootstrap.min.js')
-        script(type='text/javascript', src='assets/js/slick.min.js')
-        script(type='text/javascript', src='assets/js/bootstrap-hover-dropdown.min.js')
-        script(type='text/javascript', src='assets/js/modernizr.custom.68172.js')
-        script(type='text/javascript', src='assets/js/respond.js')
-        script(type='text/javascript', src='assets/js/index.js')
+                                    +aside-home("aside-image-thumb-01", "Perú cayó 3-1 ante Colomba por el hexagonal final del Sudamericano Sub 20 [VIDEO/FOTOS]")
+                                .text-center
+                                    a.position(href="") Mas en 
+                                        span.rojo Libero.pe
+                            .border
+                                .text-center
+                                    +imagen("logo_popular")
+                                .row
+                                    +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
+                                .row
+                                    +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
+                                .row
+                                    +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
+                                .row
+                                    +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
+                                .text-center
+                                    a.position(href="") Mas en 
+                                        span.rojo elPopular.pe
+                            .border.mb-10
+                                .text-center
+                                    +imagen("logo_wapa")
+                                .row
+                                    +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
+                                .row
+                                    +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
+                                .row
+                                    +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
+                                .row
+                                    +aside-home("aside-image-thumb-01", "Joshua Ivanoff está loco por olor de Melissa Loza")
+                                .text-center
+                                    a.position(href="") Mas en 
+                                        span.rojo Wapa.pe
+                            .suscribe
+                                .text-center
+                                    +img-logo("img_reporteroc")
+                                .suscribe-content
+                                    h5.text-center Reportero cuidadano
+                                    img.w-100(src="assets/image/img_sd_reporteroc.jpg")
+                                    h6 Estacionamiento indebido
+                                    p ¿Está permitido que dejen su auto en reiteradas ocasiones tada la noche en la puerta de tu casa? Placa DG6232, eso que antes lo dejaba entre la vereda y mi puerta.
+                                p.text-center.pd-5
+                                    a(href="").btn.btn-danger.boton-guinda ENVIAR FOTOS
+                                h6.text-center Más fotos

@@ -1,0 +1,18 @@
+include helpers/mixins.jade
+extends base/base.jade
+block titleDocument
+    title Blogs
+block contenido
+    +slidered
+    +bannerupc
+    .blog
+        h1.hero-title Blogs
+        h4.hero-subtitle Lo último en blogs
+            img.arrow(src="assets/image/double-arrow-bottom.png", alt="double-arrow-bottom")
+        +row-blog
+        +row-blog
+        +row-blog
+        +row-blog
+        +row-blog
+        +row-blog
+        +row-blog

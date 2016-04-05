@@ -53,10 +53,8 @@
 		}
 	}
 }
-.slider{
-	.node{
-		img{
-			border:5px solid white;
-		}
-	}
+@mixin transition($time){
+	-webkit-transition: $time;
+	-moz-transition: $time;
+	-o-transition: $time;
 }

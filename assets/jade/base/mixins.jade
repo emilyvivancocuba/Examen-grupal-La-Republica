@@ -1,0 +1,274 @@
+mixin navegador(url,texto)
+	li: a(href=url) #{texto}
+mixin enlace(clase,url,texto)
+	a(href=url,class=clase) #{texto}
+mixin droplist
+	.dropdown
+		button.btn.btn-mas.dropdown-toggle(type="button", id="dropdownMenu1" data-toggle="dropdown", aria-haspopup="true", aria-expanded="true")
+			span más secciones
+			span.caret
+		ul.dropdown-menu(aria-labelledby="dropdownMenu1")
+			li
+				a(href="index.html") home
+			li 
+				a(href="columnistas.html") Columnistas
+			li 
+				a(href="blog.html") Blog
+			li 
+				a(href="contacto.html") Contacto
+mixin gray-box(subtitle1, subtitle2, imgURL)
+	.gray-box
+		.media
+			a(href="#").media-left
+				img(src=imgURL, alt=subtitle1, title=subtitle1).media-object.img-responsive.img-thumbnail
+			.media-body
+				h4.media-heading=subtitle1
+				h5= subtitle2
+					if block
+						block
+mixin blog-box(title, subtitle1, subtitle2, imgURL)
+	.col-xs-12.col-sm-4.col-md-4.col-lg-4
+		.box
+			p
+				small Lunes, 14 de julio de 2015
+			h3= title
+			+gray-box(subtitle1, subtitle2, imgURL)
+				if block
+					block
+mixin blog-gol-de-la-muerte
+	+blog-box('El gol de la muerte', 'Blog', 'LIBROS', 'assets/image/blog_avatar_01.jpg')
+	if block
+		block
+mixin columnista-1-gol-de-la-muerte
+	+blog-box('El gol de la muerte', 'Augusto Álvarez Rodrich', 'Claro y directo', 'assets/image/blog_avatar_01.jpg')
+	if block
+		block
+mixin columnista-2-gol-de-la-muerte
+	+blog-box('El gol de la muerte', 'Francisco Durand', 'Tiro al blanco', 'assets/image/blog_avatar_01.jpg')
+	if block
+		block
+mixin blog-dios-ha-muerto
+	+blog-box('Dios ha muerto... tengo las manos cubiertas de sangre', 'Blog', 'Ya lo pasado, PASADO', 'assets/image/blog_avatar_02.jpg')
+	if block
+		block
+mixin columnista-1-dios-ha-muerto
+	+blog-box('Dios ha muerto... tengo las manos cubiertas de sangre', 'Mirko Lauer', 'Observador', 'assets/image/blog_avatar_02.jpg')
+	if block
+		block
+mixin columnista-2-dios-ha-muerto
+	+blog-box('Dios ha muerto... tengo las manos cubiertas de sangre', 'Humberto Campodónico', 'Cristal de Mira', 'assets/image/blog_avatar_02.jpg')
+	if block
+		block
+mixin blog-tu-queso-favorito
+	+blog-box('¿Cuál es tu queso favorito?', 'Blog', 'Décimas cosas', 'assets/image/blog_avatar_03.jpg')
+	if block
+		block
+mixin columnista-1-tu-queso-favorito
+	+blog-box('¿Cuál es tu queso favorito?', 'Aldo Miyashiro', 'Chino de mi barrio', 'assets/image/blog_avatar_03.jpg')
+	if block
+		block
+mixin columnista-2-tu-queso-favorito
+	+blog-box('¿Cuál es tu queso favorito?', 'Javier Ágreda', 'Jaque Perpetuo', 'assets/image/blog_avatar_03.jpg')
+	if block
+		block
+mixin row-blog
+	.row
+		+blog-gol-de-la-muerte
+		+blog-dios-ha-muerto
+		+blog-tu-queso-favorito
+		if block
+			block
+mixin row-1-columnistas
+	.row
+		+columnista-1-gol-de-la-muerte
+		+columnista-1-dios-ha-muerto
+		+columnista-1-tu-queso-favorito
+		if block
+			block
+mixin row-2-columnistas
+	.row
+		+columnista-2-gol-de-la-muerte
+		+columnista-2-dios-ha-muerto
+		+columnista-2-tu-queso-favorito
+		if block
+			block
+mixin gray-box-col(subtitle1, subtitle2, imgURL)
+	.col-xs-12.col-sm-6.col-md-3.col-lg-3
+		+gray-box(subtitle1, subtitle2, imgURL)
+		if block
+			block
+mixin row-1-todos-los-columnistas
+	.row.row-columnistas
+		+gray-box-col('Francisco Durand', 'Tiro al blanco', 'assets/image/blog_avatar_02.jpg')
+		+gray-box-col('Humberto Campodónico', 'Cristal de Mira', 'assets/image/blog_avatar_03.jpg')
+		+gray-box-col('Javier Ágreda', 'Jaque Perpetuo', 'assets/image/blog_avatar_01.jpg')
+		+gray-box-col('Javier Ágreda', 'Jaque Perpetuo', 'assets/image/blog_avatar_02.jpg')
+		if block
+			block
+mixin row-2-todos-los-columnistas
+	.row.row-columnistas
+		+gray-box-col('Francisco Durand', 'Delito de Opinión', 'assets/image/blog_avatar_03.jpg')
+		+gray-box-col('Humberto Campodónico', 'Actualidad Económica - Oscar Dancourt', 'assets/image/blog_avatar_01.jpg')
+		+gray-box-col('Javier Ágreda', 'Mirada externa', 'assets/image/blog_avatar_02.jpg')
+		+gray-box-col('Javier Ágreda', 'Defensa', 'assets/image/blog_avatar_01.jpg')
+		if block
+			block
+mixin slidered
+	.row
+		.col-md-2.col-sm-2
+			span.e-nwspaper.etiqueta temas del día
+		.col-md-10.col-sm-10.text-center.bck-gris
+			.slide-noticias(data-slick='{"slidesToShow":4, "slidesToScroll":4')
+				marquee
+					.item
+						+enlace('e-nwspaper ','#','Globos de oro')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Youtube')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','PNP')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Charlie Hebdo')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','FC Barcelona')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Alianza Lima')
+				marquee
+					.item
+						+enlace('e-nwspaper ','#','Balón de Oro')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Twitter')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Balón de Oro')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Twitter')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Balón de Oro')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Twitter')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Oscars')
+				marquee
+					.item
+						+enlace('e-nwspaper ','#','Barbarie')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Premios Juventud')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Koala')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Bolsa')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Noticia')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Noticia')
+						img.bolita(src="assets/image/bullet.gif", alt="")
+						+enlace('e-nwspaper ','#','Noticia')
+mixin bannerupc
+	.row.pdt-15
+		img.w-100.hidden-xs.hidden-sm(src="assets/image/banner-header.jpg", alt="maestria upc")
+		if block
+			block
+mixin imagen-100(image)
+	img.w-100(src="assets/image/" + image + ".jpg")
+
+mixin img-logo(images)
+	img.img-logo(src="assets/image/" + images + ".png")
+
+mixin imagen(image)
+	img(src="assets/image/" + image + ".jpg")
+
+mixin imagen1(image)
+	img(src="assets/image/" + image + ".png")
+
+mixin redes-sub(a,b,c,d) 
+	.red-sub-title
+		ul
+			a(href="")
+				span.fa.fa-facebook.pr-10
+			a(href="")
+				span.fa.fa-twitter.pr-10
+			a(href="")
+				span.fa.fa-google-plus.pr-10
+			img.pr-10(src="assets/image/bullet.gif")
+			if c==0
+				span.pr-10.pt-sans=a
+			else
+				img.pr-5(src="assets/image/ico_comment.png")
+				span.pr-10.pt-sans=a
+			img.pr-10(src="assets/image/bullet.gif")
+			span.pr-10.pt-sans=b
+			if d==0
+				img.pr-10(src="assets/image/bullet.gif")
+				span.fa.fa-youtube-play
+			else
+
+mixin home-titular(imagen,texto)
+	.home-preliminar
+		img.w-100(src=imagen)
+		.degradado.w-100
+		p=texto
+
+mixin home-columnistas(imagen,texto,texto1)
+	.home-columna.text-center
+		img.w-100(src=imagen)
+		h6=texto
+		p=texto1
+
+mixin home-separador(texto)
+	h3.home-separador.text-center.mg-0
+		a(href="")=texto
+mixin noticias-home(texto1,imagen,texto,texto2)
+	.col-sm-6
+		.border
+			h5.titulo-noticia-home.rojo.text-center=texto1
+			+home-titular(imagen,texto)
+			h5.text-center Todo sobre
+				a(href="")=texto1
+mixin ultima-noticia(title,imagen,contenido,a,b,c,d)
+	.ultima-noticia
+		p Hace 1 hora 12 mins
+		h4=title
+		.media
+			.media-left
+				a(href="")
+					img(src=imagen)
+			.media-body
+				p=contenido
+				.enlace-red
+					+redes-sub(a,b,c,d)
+
+mixin aside-home(image,texto)
+	.media-home
+		.col-sm-6
+			+imagen(image)
+		.col-sm-6
+			h6=texto 
+mixin imagen-title(imagen,title)
+	.imagen-title
+		.col-sm-12
+			.contenido-img-title
+				+imagen(imagen)
+				.position-absoluto.w-100.text-center
+					p.w-100=title
+mixin media-bloqueros(imagen,a,texto)
+	.media-bloqueros
+		.media 
+			.media-left
+				a
+					+imagen(imagen)
+			.media-body
+				if a==0
+					h6 	Augusto Álvarez Rodrich
+				else
+					h6 Ya lo pasado, PASADO
+				h5=texto
+
+mixin my-slyder(image,a,texto,texto2)
+	.node.node-columnistas
+		+imagen(image)
+		.title
+			if a==0
+				a(href="")=texto
+			else
+				h6=texto
+			h5.font-monstserrat-sub=texto2
+			

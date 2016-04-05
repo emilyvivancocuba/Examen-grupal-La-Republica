@@ -1,0 +1,60 @@
+extends ./base/base.jade
+
+block titleDocument
+	title Contacto
+
+block contenido
+	.container-fluid
+		+slidered
+		.row
+			h2.text-center Contáctese con nosotros
+			p.pdt-15 Llena este formulario si necesitas enviarnos alguna información acerca del contenido del sitio web, su funcionalidad, o si tiene alguna propuesta de información o mejora para el sitio. Así mismo, puede hacer llegar a los redactores su opinión acerca de los contenidos de una determninada sección el cual podrá elegir como destinario.
+		.row.text-center
+			.col-md-8.col-md-offset-2
+				form
+					.form-group
+						input(type="name", class="form-control", id="nombre", placeholder="Nombres Completos" required="required")					
+					.form-group
+						input(type="email", class="form-control", id="email", placeholder="Correo electrónico" required="required")
+					.form-group
+						input(type="phone", class="form-control", id="phone", placeholder="Teléfono" required="required")
+						small (Opcional)
+		.row.text-center
+			.col-md-8.col-md-offset-2.col-xs-offset-2.max-450
+				h3 Elija un destinatario
+				.radio.clearfix.pd-15-20
+					.pull-left
+						input(type="radio", id="radio1") 
+						label Sugerencia para el sitio web
+					small.pull-right (Ej: funcionamiento y mejoras para el sitio)
+				.radio.clearfix.pd-15-20
+					.pull-left
+						input(type="radio", id="radio1") 
+						label Dirección periodística 
+					small.pull-right (Ej: Sugerencia para la nota de prensa)
+				.radio.clearfix.pd-15-20
+					.pull-left
+						input(type="radio", id="radio1") 
+						label Direccion comercial
+					small.pull-right (Ej: Publicidad en diarios o sitios web)
+				.radio.clearfix.pd-15-20
+					.pull-left
+						input(type="radio", id="radio1") 
+						label Cartas al director
+					small.pull-right (Ej: denuncias, comentarios e impresiones)
+				.radio.clearfix.pd-15-20
+					.pull-left
+						input(type="radio", id="radio1") 
+						label Promociones y productos del diario
+					small.pull-right (Ej: Promociones,tablet,etc)
+				.radio.clearfix.pd-15-20
+					.pull-left
+						input(type="radio", id="radio1") 
+						label Archivo periodístico
+					small.pull-right (Ej: Ediciones imipresas/fotos
+		.row.text-center
+			.col-md-8.col-md-offset-2.text-center
+				form
+					.form-group
+						textarea.form-control(id="mensaje",rows="7",placeholder="Mensaje",required="required")
+					button.btn.btn-enviar.btn-primary.e-nwspaper.etiqueta(type="submit") Enviar

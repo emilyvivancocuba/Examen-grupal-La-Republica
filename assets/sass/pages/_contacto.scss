@@ -1,0 +1,46 @@
+.slick-slider{
+	margin-bottom:0px;
+	img{
+		display: inline-block;
+	}
+}
+.slide-noticias{
+	.e-nwspaper{
+		padding:0px 20px;
+		background-image:url('../assets/image/bullet.gif');		
+		background-size:cover;
+		font-size: .7em;
+		text-transform: capitalize;
+		font-weight: normal;
+	}
+	.item{
+		white-space: nowrap;
+		overflow: hidden;
+	}
+}
+.etiqueta{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	color:white;
+	background-color:black;
+	padding:3px 8px;
+}
+
+.form-control{
+	background-color:#EEEEEE;
+	border-top:2px solid gray;
+	border-left:2px solid gray;
+	max-width:450px;
+	margin:0px auto;
+}
+.btn-enviar{
+	width:220px;
+	background-color:black;
+	color:white;
+	height:40px;
+	font-size:.9em;
+}
+.max-450{
+	max-width:600px;
+}

@@ -199,7 +199,10 @@ mixin redes-sub(a,b,c,d)
 			if d==0
 				img.pr-10(src="assets/image/bullet.gif")
 				span.fa.fa-youtube-play
+			else if d==1
+				span.fa.fa-camera-retro
 			else
+				span
 
 mixin home-titular(imagen,texto)
 	.home-preliminar
@@ -246,7 +249,7 @@ mixin imagen-title(imagen,title)
 	.imagen-title
 		.col-sm-12
 			.contenido-img-title
-				+imagen(imagen)
+				+imagen-100(imagen)
 				.position-absoluto.w-100.text-center
 					p.w-100=title
 mixin media-bloqueros(imagen,a,texto)

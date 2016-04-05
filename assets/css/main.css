@@ -6389,7 +6389,7 @@ footer {
 
 .home-preliminar {
   position: relative;
-  background: black; }
+  background: linear-gradient(to top, black, rgba(0, 0, 0, 0.2)); }
   .home-preliminar img {
     position: relative;
     display: block;

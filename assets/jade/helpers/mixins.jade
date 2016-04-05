@@ -45,7 +45,7 @@ mixin home-columnistas(imagen,texto,texto1)
 		p=texto1
 
 mixin home-separador(texto)
-	h3.home-separador.text-center
+	h3.home-separador.text-center.mg-0
 		a(href="")=texto
 mixin noticias-home(texto1,imagen,texto,texto2)
 	.col-sm-6
@@ -96,11 +96,12 @@ mixin media-bloqueros(imagen,a,texto)
 mixin my-slyder(image,a,texto,texto2)
 	.node.node-columnistas
 		+imagen(image)
-		if a==0
-			a(href="")=texto
-		else
-			h6=texto
-		h5=texto2
+		.title
+			if a==0
+				a(href="")=texto
+			else
+				h6=texto
+			h5.font-monstserrat-sub=texto2
 
 
 	

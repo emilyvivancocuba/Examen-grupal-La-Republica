@@ -173,3 +173,29 @@
 .media-bloqueros{
 	margin-bottom: 10px;
 }
+.bg-gray-sider{
+
+}
+.slider{
+	.node{
+		img{
+			border: 5px;
+
+		}
+		
+		.title{
+			h6{
+			font-size: 13px;
+			font-family: 'PT+Sans';
+			}
+			a{
+				font-family: 'PT+Sans';
+				font-size: 12px;
+				font-weight: lighter;
+				text-decoration: underline;
+				color: black;
+			}
+		}
+	}
+}
+

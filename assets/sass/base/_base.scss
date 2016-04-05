@@ -1,9 +1,7 @@
 *{
 	margin: 0px;
 	padding: 0px;
-}
-body{
-	@extend .font-robot;
+	box-sizing: border-box;
 }
 a{
 	text-decoration: none !important;
@@ -12,4 +10,58 @@ a{
     &:hover, &:focus{
     	color: inherit;
     }
+}
+.fs-15{
+	font-size: 15px;
+}
+.fs-10{
+	font-size: 6px;
+}
+.pr-10{
+	padding-right: 10px;
+}
+.pr-5{
+	padding-right: 5px;
+}
+.mb-10{
+	margin-bottom: 10px;
+}
+.pt-0{
+	padding-top: 0!important;
+}
+.columnistas .node-columnistas {
+    float: left;
+    padding: 0 10px;
+    text-align: center;
+    width: 16.6%;
+}
+.node-columnistas {
+    float: left;
+    padding: 0 10px;
+    text-align: center;
+    width: 16%;
+}
+.slider{
+	width: 90%;
+	height: 300px;
+	margin:auto;
+	background: green;
+
+}
+.slick-dots{
+	li {
+		background: yellow;
+	}
+}
+.violeta{
+	color: #6c246c;
+}
+.bg-violeta{
+	background:#6c246c; 
+}
+.border-image{
+	border: 2px solid $color-border;
+}
+.pd-5{
+	padding:5px;
 }

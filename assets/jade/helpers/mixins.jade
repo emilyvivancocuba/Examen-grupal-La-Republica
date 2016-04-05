@@ -1,0 +1,115 @@
+mixin imagen-100(image)
+	img.w-100(src="assets/image/" + image + ".jpg")
+
+mixin img-logo(images)
+	img.img-logo(src="assets/image/" + images + ".png")
+
+mixin imagen(image)
+	img(src="assets/image/" + image + ".jpg")
+
+mixin imagen1(image)
+	img(src="assets/image/" + image + ".png")
+
+mixin redes-sub(a,b,c,d) 
+	.red-sub-title
+		ul
+			a(href="")
+				span.fa.fa-facebook.pr-10
+			a(href="")
+				span.fa.fa-twitter.pr-10
+			a(href="")
+				span.fa.fa-google-plus.pr-10
+			img.pr-10(src="assets/image/bullet.gif")
+			if c==0
+				span.pr-10=a
+			else
+				img.pr-5(src="assets/image/ico_comment.png")
+				span.pr-10=a
+			img.pr-10(src="assets/image/bullet.gif")
+			span.pr-10=b
+			if d==0
+				img.pr-10(src="assets/image/bullet.gif")
+				span.fa.fa-youtube-play
+			else
+
+mixin home-titular(imagen,texto)
+	.home-preliminar
+		img.w-100(src=imagen)
+		.degradado.w-100
+		p=texto
+
+mixin home-columnistas(imagen,texto,texto1)
+	.home-columna.text-center
+		img.w-100(src=imagen)
+		h6=texto
+		p=texto1
+
+mixin home-separador(texto)
+	h3.home-separador.text-center
+		a(href="")=texto
+mixin noticias-home(texto1,imagen,texto,texto2)
+	.col-sm-6
+		.border
+			h5.titulo-noticia-home.rojo.text-center=texto1
+			+home-titular(imagen,texto)
+			h5.text-center Todo sobre
+				a(href="")=texto1
+mixin ultima-noticia(title,imagen,contenido,a,b,c,d)
+	.ultima-noticia
+		p Hace 1 hora 12 mins
+		h4=title
+		.media
+			.media-left
+				a(href="")
+					img(src=imagen)
+			.media-body
+				p=contenido
+				.enlace-red
+					+redes-sub(a,b,c,d)
+
+mixin aside-home(image,texto)
+	.media-home
+		.col-sm-6
+			+imagen(image)
+		.col-sm-6
+			h6=texto 
+mixin imagen-title(imagen,title)
+	.imagen-title
+		.col-sm-12
+			.contenido-img-title
+				+imagen(imagen)
+				.position-absoluto.w-100.text-center
+					p.w-100=title
+mixin media-bloqueros(imagen,a,texto)
+	.media-bloqueros
+		.media 
+			.media-left
+				a
+					+imagen(imagen)
+			.media-body
+				if a==0
+					h6 	Augusto Álvarez Rodrich
+				else
+					h6 Ya lo pasado, PASADO
+				h5=texto
+
+mixin my-slyder(image,a,texto,texto2)
+	.node.node-columnistas
+		+imagen(image)
+		if a==0
+			a(href="")=texto
+		else
+			h6=texto
+		h5=texto2
+
+
+	
+
+	
+
+
+
+
+
+
+

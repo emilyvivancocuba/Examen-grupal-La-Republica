@@ -55,7 +55,7 @@ block contenido
                     +noticias-home('Super Bowl',"assets/image/img_especiales_aside.jpg",'NFL al ganar 28-24 a Seahawks | VIDEO')
                     .main
                         .col-sm-12.ultima-noticias
-                            h4.title-noticia ULTIMAS NOTICIAS
+                            h4.title-noticia.mgb-50 ULTIMAS NOTICIAS
                                 img.pdl-15(src="assets/image/double-arrow-bottom.png")
                             +ultima-noticia('Emma Watson protagonizará "La bella y la bestia" |VIDEO',"assets/image/img_news.jpg",'La actriz Emma Watson fue confirmada por Disney como la protagonista de La bella y la bestia en la versión de carne y de hueso',10,'ESPECTÁULOS',1,1)
                             hr.separador-gray
@@ -126,7 +126,7 @@ block contenido
                                 input.w-100(type="password" )
                                 a(href="").w-100.btn.btn-danger.boton-guinda SUSCRIBIRSE
 
-                    .border.mgtb-10
+                    .border.mgtb-30
                         .text-center
                             +imagen("logo_aweita")
                         .row
@@ -141,14 +141,13 @@ block contenido
                             span Más en 
                                 a.violeta(href="") Aweita.pe
                         img.bg-violeta(assets/image/nota_galeria_border.png)
-                    .col-sm-12
-                        .row
-                            +home-separador('FOTOS DESTACADAS')
+                    +home-separador('FOTOS DESTACADAS')
 
-                    .noticia-aside.mgb-50
-                        .border-image
-                            +imagen-100("img_fotodes_prominent")
-                        p.pd-5.font-monstserrat-sub Líneas de Nasca: admiten prisión preventiva de 6 meses para activista de Greenpeace | FOTOS
+                    .noticia-aside
+                        .col-sm-12
+                            .border-image
+                                +imagen-100("img_fotodes_prominent")
+                            p.pd-5.font-monstserrat-sub Líneas de Nasca: admiten prisión preventiva de 6 meses para activista de Greenpeace | FOTOS
                     .noticia
                         .row
                             +aside-home("img_fotodes", "Uchuraccay: El pueblo que recibe con flores a quienes llegan a pie FOTOS")
@@ -173,7 +172,7 @@ block contenido
                             +imagen-100("img_carlincatura_sd")
                             h6.font-monstserrat-sub.rojo Todas las Carlinturas
                     hr.separador-gray
-                    .bloqueros-home.mgtb-50
+                    .bloqueros-home.mgtb-30
                         +media-bloqueros("img_blogueros",0,"Charlie Hebdo, historia que no debe repetirse")
                         +media-bloqueros("img_blogueros",0,"El único pulpin es Humala")
                         +media-bloqueros("img_blogueros",0,"Dios ha muerto... tengo las manos")
@@ -184,7 +183,7 @@ block contenido
                         +media-bloqueros("img_blogueros",0,"El único pulpin es Humala")
                         .row.text-center
                             h6.rojo.font-monstserrat-sub Todos los blogs
-                    .mgtb-50
+                    .mgtb-10
                         +home-separador('EDICIÓN IMPRESA')
                     .edicion
                         h5.text-center La República - Lima
@@ -286,7 +285,7 @@ block contenido
                                 .text-center
                                     a.position(href="") Mas en 
                                         span.rojo Wapa.pe
-                            .suscribe
+                            .suscribe.mb-10
                                 .text-center
                                     +img-logo("img_reporteroc")
                                 .suscribe-content

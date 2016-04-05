@@ -22,14 +22,13 @@
 }
 .home-preliminar{
 	position: relative;
+	background:black;
 	img{
 		position: relative;
 		display: block;
-		background: linear-gradient(white, black);
+		opacity: .5;
 	}
 	.degradado{
-	background: l
-	inear-gradient(rgba(255, 255, 255, 0), black);
 	height: 50%;
 	position: absolute;
 	bottom: 0;

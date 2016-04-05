@@ -6380,13 +6380,13 @@ footer {
   color: #768596; }
 
 .home-preliminar {
-  position: relative; }
+  position: relative;
+  background: black; }
   .home-preliminar img {
     position: relative;
     display: block;
-    background: linear-gradient(white, black); }
+    opacity: .5; }
   .home-preliminar .degradado {
-    background: l inear-gradient(rgba(255, 255, 255, 0), black);
     height: 50%;
     position: absolute;
     bottom: 0; }

@@ -6579,6 +6579,9 @@ footer {
       margin-bottom: 4px; }
   .columnistas nav ul li a {
     font-size: 16px; } }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .cuadro-titular {
+    width: 240px; } }
 @media screen and (max-width: 767px) {
   .columnistas .row {
     margin-bottom: 0px; }

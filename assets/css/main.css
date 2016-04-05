@@ -5833,7 +5833,7 @@ body {
   font-size: 15px; }
 
 .pt-sans {
-  font-family: "PT sans"; }
+  font-family: 'PT sans'; }
 
 .open-sans {
   font-family: 'open-sans'; }
@@ -5864,9 +5864,14 @@ body {
   margin-top: 30px;
   margin-bottom: 30px; }
 
-.mgtb-10 {
-  margin-top: 10px;
-  margin-bottom: 10px; }
+.mgb-50 {
+  margin-top: 50px; }
+
+.mgl-50 {
+  margin-top: 50px; }
+
+.mgtb-50 {
+  margin-top: 50px; }
 
 h6 {
   margin: 0; }
@@ -6369,6 +6374,9 @@ footer {
     color: #687888; }
   .enlace-red .red-sub-title ul .fa-circle {
     font-size: 5px; }
+  .enlace-red .red-sub-title ul .fa-youtube-play, .enlace-red .red-sub-title ul .fa-camera-retro {
+    color: #aa1801;
+    font-size: 16px; }
 
 .rojo {
   color: #DB4949;
